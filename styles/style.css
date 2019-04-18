@@ -1,0 +1,28 @@
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #272822;
+}
+
+.intro__pre {}
+
+.pre {
+    font-size: 2em;
+    color: white;
+    font-family: 'Courier New', 'Ubuntu Mono', Consolas, monospace;
+}
+
+.intro__userpic {
+    padding: 40px;
+}
+
+.userpic {}
+
+.intro__img {
+    width: 200px;
+    /* border: 2px solid white; */
+    border-radius: 50%;
+}
