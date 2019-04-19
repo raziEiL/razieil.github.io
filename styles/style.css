@@ -1,18 +1,100 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #457B9D;
+    height: 65px;
+}
+
+.nav__list {
+    display: flex;
+    padding: 0 30px 0 0;
+    list-style: none;
+}
+
+.nav__item {
+    font-size: 16px;
+    text-transform: lowercase;
+    font-family: 'Courier New', Consolas, monospace;
+    border: 1px solid hsla(0, 0%, 86%, 0);
+    border-radius: 5px;
+    margin: 0 5px;
+}
+
+.nav__item:hover {
+    animation-name: border-fade-in;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes border-fade-in {
+    100% {
+        border: 1px solid hsla(0, 0%, 100%, 1);
+    }
+}
+
+.nav__link {
+    display: block;
+    text-decoration: none;
+    color: hsl(0, 0%, 86%);
+    padding: 15px;
+}
+
+.nav__link:hover {
+    animation-name: fade-in;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fade-in {
+    100% {
+        color: hsl(0, 0%, 100%);
+    }
+}
+
+
 .intro {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background: #272822;
+    min-height: 85vh;
+    padding-top: 15vh;
+    /*  background: #272822; */
+    background: hsl(0, 0%, 16%);
 }
 
-.intro__pre {}
-
-.pre {
+.intro__pre {
     font-size: 2em;
+    color: hsl(0, 0%, 86%);
+    font-family: 'Courier New', Consolas, monospace;
+
+    /*   background: linear-gradient(to bottom,
+        hsl(0, 0%, 20%),
+        hsl(0, 0%, 20%) 50%,
+        hsl(0, 0%, 18%) 50%,
+        hsl(0, 0%, 18%));
+    background-size: 100% 2.25em; */
+}
+
+.intro__pre>i {
+    /* color: #44CDEF; */
+}
+
+.intro__pre>span {
+    text-transform: uppercase;
     color: white;
-    font-family: 'Courier New', 'Ubuntu Mono', Consolas, monospace;
+    letter-spacing: .1em;
+    /*  font-weight: bold; */
+    /* color: hsl(355, 78%, 66%); */
 }
 
 .intro__userpic {
@@ -25,4 +107,43 @@
     width: 200px;
     /* border: 2px solid white; */
     border-radius: 50%;
+}
+
+/* css-tricks */
+.typewriter {
+    /* Ensures the content is not revealed until the animation */
+    overflow: hidden;
+    /* The typwriter cursor */
+    border-right: .15em solid orange;
+    /* Keeps the content on a single line */
+    white-space: nowrap;
+    /* Gives that scrolling effect as the typing happens */
+    margin: 0 auto;
+    /* Adjust as needed */
+    letter-spacing: .15em;
+    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: orange;
+    }
 }
