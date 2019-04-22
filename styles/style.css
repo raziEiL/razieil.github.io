@@ -2,10 +2,42 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+h1,
+h2,
+h3,
+h4,
+p {
+    margin-top: 0;
+}
+
+pre,
+ul {
+    padding: 0;
+    margin: 0;
+}
+
 :root {
     --nav-height: 64px;
-    --container-padding: 15px;
-    --container-padding-neg: calc(var(--container-padding) * -1);
+}
+
+.nav-fix {
+    padding-top: var(--nav-height);
+    margin-top: calc(var(--nav-height) * -1);
+}
+
+a.anchor-fix {
+    display: block;
+    position: relative;
+    top: calc(var(--nav-height) * -1);
+    visibility: hidden;
+}
+
+section:nth-child(even) {
+    background: hsl(0, 0%, 18%);
+}
+
+section:nth-child(odd) {
+    background: hsl(0, 0%, 96%);
 }
 
 /*  -------- NAVBAR -------- */
@@ -21,20 +53,25 @@ body {
     background: #3F708F;
 }
 
+.nav__right {
+    margin-right: 30px;
+}
+
 .nav__list {
     display: flex;
-    padding: 0 30px 0 30px;
-    margin: 0;
     list-style: none;
+    text-transform: lowercase;
+    font-family: 'Courier New', Consolas, monospace;
 }
 
 .nav__item {
-    font-size: 16px;
-    text-transform: lowercase;
-    font-family: 'Courier New', Consolas, monospace;
     border: 1px solid hsla(0, 0%, 93%, 0);
     border-radius: 5px;
-    margin: 0 5px;
+    margin-right: 5px;
+}
+
+.nav__item:last-child {
+    margin-right: 0;
 }
 
 .nav__item:hover {
@@ -70,17 +107,11 @@ body {
 }
 
 /*  -------- INTRO -------- */
-.container {
-    padding: var(--nav-height) var(--container-padding) 0;
-}
-
 .intro {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-right: var(--container-padding-neg);
-    margin-left: var(--container-padding-neg);
     /* opera */
     height: -o-calc(100vh - var(--nav-height));
     /* google, safari */
@@ -88,15 +119,25 @@ body {
     /* firefox */
     height: -moz-calc(100vh - var(--nav-height));
     height: calc(100vh - var(--nav-height));
+    min-height: 640px;
+    margin-top: var(--nav-height);
+}
 
-    background: hsl(0, 0%, 18%);
+.intro__elem1 {
+    margin-bottom: 50px;
+}
+
+.intro__img {
+    height: auto;
+    width: 220px;
+    /*  border: 2px solid hsl(0, 0%, 60%); */
+    border-radius: 50%;
 }
 
 .intro__pre {
     font-size: 2em;
     color: hsl(0, 0%, 60%);
     font-family: 'Courier New', Consolas, monospace;
-    margin: 50px 0 0;
     /*   background: linear-gradient(to bottom,
         hsl(0, 0%, 20%),
         hsl(0, 0%, 20%) 50%,
@@ -127,49 +168,86 @@ body {
     }
 }
 
-.intro__img {
-    display: block;
-    height: auto;
-    width: 220px;
-    /*  border: 2px solid hsl(0, 0%, 60%); */
-    border-radius: 50%;
+/*  -------- ABOUT -------- */
+.about {
+    background: hsl(0, 0%, 96%);
 }
 
-/* css-tricks */
-.typewriter {
-    /* Ensures the content is not revealed until the animation */
-    overflow: hidden;
-    /* The typwriter cursor */
-    border-right: .15em solid orange;
-    /* Keeps the content on a single line */
-    white-space: nowrap;
-    /* Gives that scrolling effect as the typing happens */
+.row {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1400px;
     margin: 0 auto;
-    /* Adjust as needed */
-    letter-spacing: .15em;
-    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
 }
 
-/* The typing effect */
-@keyframes typing {
-    from {
-        width: 0
-    }
-
-    to {
-        width: 100%
-    }
+.col {
+    width: 45%;
 }
 
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-
-    from,
-    to {
-        border-color: transparent
-    }
-
-    50% {
-        border-color: orange;
-    }
+.header {
+    text-align: center;
+    padding-top: 2em;
+    margin-top: 0;
 }
+
+.header--color-even {
+    color: white;
+}
+
+.header--color-odd {
+    color: black;
+}
+
+.text {
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.text:last-child {
+    margin-bottom: 0;
+}
+
+.text--indent {
+    text-indent: 2em;
+}
+
+.text--color-even {
+    color: hsl(0, 0%, 82%);
+}
+
+.text--color-odd {
+    color: hsl(0, 0%, 18%);
+}
+
+.about__list {
+    /* list-style: inside; */
+    list-style: none;
+}
+
+.about__item {
+    background: url(../images/symbol.png) no-repeat top 3px left;
+    /* border-left: 5px solid #3F708F; */
+    padding-left: 24px;
+    margin-bottom: 1em;
+}
+
+/* .about__item:nth-child(odd) {
+    background: hsl(183, 42%, 92%);
+} */
+
+
+/* .about__item:nth-child(2) {
+    border-color: #8bc63e;
+}
+
+.about__item:nth-child(3) {
+    border-color: #fcba30;
+}
+
+.about__item:nth-child(4) {
+    border-color: #1ccfc9;
+}
+
+.about__item:nth-child(5) {
+    border-color: #493224;
+} */

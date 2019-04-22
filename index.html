@@ -13,26 +13,50 @@
 
     <body>
         <nav class="nav">
-            <ul class="nav__list">
-                <li class="nav__item"><a class="nav__link" href="#">Обо мне</a></li>
-                <li class="nav__item"><a class="nav__link" href="#">портфолио</a></li>
-                <li class="nav__item"><a class="nav__link" href="#">случайные факты</a></li>
-                <li class="nav__item"><a class="nav__link" href="#">контакты</a></li>
-            </ul>
+            <div class="nav__right">
+                <ul class="nav__list">
+                    <li class="nav__item"><a class="nav__link" href="#about">Обо мне</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#">портфолио</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#">случайные факты</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#">контакты</a></li>
+                </ul>
+            </div>
         </nav>
-        <div class="container">
-            <section class="intro">
-                <img class="intro__img" src="images/photo-5.jpg" alt="Photo">
-                <pre class="intro__pre">{
+        <section class="intro">
+            <div class="intro__elem1">
+                <img class="intro__img" src="images/photo-5.jpg" alt="My photo">
+            </div>
+            <pre class="intro__pre">{
     <i>"message"</i>:      "<span>Привет, я</span>",
     <i>"profile"</i>: {
         <i>"name"</i>:     "<span>Денис Медведев</span>",
         <i>"job"</i>:      "<span>Веб-разработчик</span>"
     }
 }</pre>
+        </section>
 
-            </section>
-        </div>
+        <section class="about">
+            <a href="#" id="about" class="anchor-fix"></a>
+            <h1 class="header header--color-odd">Обо мне</h1>
+            <div class="row">
+                <div class="col">
+                    <p class="text text--indent text--color-odd">Привет! Меня всегда тянуло заглянуть под &laquo;капот&raquo; и посмотреть как все устроено. Нет, тачки меня интересовали только от части. Гораздо интереснее было узнавать как работают программы...</p>
+                    <p class="text text--indent text--color-odd">Если говорить про веб-разработку, то первые азы я получил во время учёбы по специальности прикладная-информатика. Одним из моих курсовых проектов была вёрстка &laquo;лэндинга&raquo; (Landing-Page). Подруга предложила дизайн, а я занялся вёрсткой. Результат мне понравился, а процесс показался увлекательным и интересным, но это ведь только вершина айсберга, — подумал тогда я. Кстати, вы можете посмотреть этот &laquo;лэндинг&raquo; в разделе портфолио.</p>
+                    <p class="text text--indent text--color-odd">Чтобы идти в ногу со временем и создавать стильные, современные сайты я решил углубиться в этом направлении программирования и стать Front-End разработчиком. Окончив онлайн курс &laquo;<a href="https://www.freecodecamp.org/certification/razieil/responsive-web-design" target="_blank">Отзывчивый веб-дизайн</a>&raquo; я закрепил фундаментальные знания и сверстал проекты для портфолио.</p>
+                    <p class="text text--indent text--color-odd">Сейчас я изучаю курс по JavaScript на ресурсе <a href="https://www.freecodecamp.org/" target="_blank">freeCodeCamp</a> и продолжаю свой рост как специалист. Далее я расскажу о другом опыте в мире IT не затрагивая темы веб-разработки.</p>
+                </div>
+                <div class="col">
+                    <h4 class="header--color-odd">Технологии, которые я использую:</h4>
+                    <ul class="about__list text text--color-odd">
+                        <li class="about__item"><b>HTML5</b> — Создаю каркас и структуру сайта;</li>
+                        <li class="about__item"><b>CSS3</b> — Применяю, чтобы сделать ваши сайты красивыми!;</li>
+                        <li class="about__item"><b>JavaScript</b> — Программирую интерактивность и логику (слайдеры, карусели, счетчики);</li>
+                        <li class="about__item"><b>Bootstrap</b> — Ускоряю процесс вёрстки с помощью фреймворков;</li>
+                        <li class="about__item"><b>БЭМ</b> — Придерживаюсь методологии вёрстки, чтобы сделать код читабельнее;</li>
+                        <li class="about__item"><b>Git</b> — Сохраняю проект, а если что-то пойдет не так я всегда смогу откатить измнения;</li>
+                    </ul>
+                </div>
+        </section>
     </body>
 
 </html>
