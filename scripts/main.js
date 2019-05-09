@@ -10,6 +10,7 @@ const COLOR_BG = getComputedStyle(document.documentElement).getPropertyValue("--
 var index;
 var j;
 
+// Tarif logic
 for (let i = 0; i < BTN_ARRAY.length; i++) {
     BTN_ARRAY[i].addEventListener("click", function () {
         btnOnClick(i)
@@ -18,7 +19,7 @@ for (let i = 0; i < BTN_ARRAY.length; i++) {
 
 function btnOnClick(val) {
 
-    console.log("click", val, "index", index);
+    console.log("btnOnClick(" + val + ")", "index =", index);
 
     if (val == BTN_INDEX) {
         if (index === undefined) {
@@ -43,3 +44,53 @@ function btnOnClick(val) {
         BTN_ARRAY[BTN_INDEX].style.borderColor = COLOR_S;
     }
 }
+
+// Nav logic
+const LINK_ARRAY = document.getElementById("nav__list").getElementsByTagName("a");
+var selectedNav = document.getElementById("nav__link-selected");
+const SECTION_NAMES = ["order", "contacts", "comment", "portfolio"]; // must equal to LINK_ARRAY len
+var selectedSection = document.getElementById(SECTION_NAMES[0]);
+
+for (let i = 0; i < SECTION_NAMES.length; i++) {
+    LINK_ARRAY[i].addEventListener("click", function () {
+        linkOnClick(this, document.getElementById(SECTION_NAMES[i]));
+    });
+}
+
+function linkOnClick(navItem, section) {
+
+    if (selectedNav == navItem)
+        return;
+    else {
+        selectedNav.className = "nav__link";
+        selectedSection.style.display = "none";
+    }
+    // console.log("btnOnClick", navItem, section);
+
+    navItem.className = "nav__link-selected"
+    section.style.display = "block";
+    selectedNav = navItem;
+    selectedSection = section;
+}
+
+/* LINK_ARRAY[0].addEventListener("click", function () {
+    console.log(1, this); // elem
+});
+
+LINK_ARRAY[0].addEventListener("click", () => {
+    console.log(2, this); // window
+});
+
+LINK_ARRAY[0].addEventListener("click", someFunc);
+
+function someFunc(e) {
+    console.log(3, this, e.target); // elem
+}
+
+LINK_ARRAY[0].addEventListener("click", function () {
+    someFunc2(123, LINK_ARRAY[0]);
+});
+
+function someFunc2(val, elem) {
+    console.log(4, this, val, elem); // undefined, 123, elem
+} */

@@ -15,8 +15,8 @@
     <body>
         <nav class="nav">
             <div class="nav__center">
-                <ul class="nav__list">
-
+                <ul id="nav__list" class="nav__list">
+                    <li class="nav__item"><a id="nav__link-selected" class="nav__link-selected" href="#">На главную</a></li>
                     <li class="nav__item"><a class="nav__link" href="#">Контакты</a></li>
                     <li class="nav__item"><a class="nav__link" href="#">Портфолио</a></li>
                     <li class="nav__item"><a class="nav__link" href="#">Отзывы</a></li>
@@ -24,7 +24,7 @@
             </div>
         </nav>
         <main class="main">
-            <section class="order">
+            <section id="order" class="order">
                 <h1 class="h1">Подготовка учебных презентаций на любую тематику!</h1>
                 <ul class="order__list">
                     <li class="order__item p--height">Выбираете тариф, жмёте «заказать»</li>
@@ -34,7 +34,7 @@
                 <p class="p--height">Гарантированно всё будет сделано точно в срок и с учетом Ваших пожеланий, а вы пока сможете отдохнуть!</p>
                 <div class="order__container">
                     <div class="order__grid-container">
-                        <div class="order__grid order__grid-item-1">
+                        <div class="order__grid">
                             <p class="p--height p--color-sd">Тариф «<strong>Золотой стандарт</strong>»</p>
                             <p class="p p--height p--color-bg">
                                 <strong>Срок изготовления:</strong> 1 неделя<br>
@@ -44,7 +44,7 @@
                             </p>
                         </div>
                         <!-- <strong></strong><br> -->
-                        <div class="order__grid order__grid-item-2">
+                        <div class="order__grid">
                             <p class="p--height p--color-sd">Тариф «<strong>За день/Мини</strong>»</p>
                             <ol class="order__list">
                                 <li class="order__item p--height p--color-bg">
@@ -62,7 +62,7 @@
                             </ol>
                             <p class="p p--height p--color-bg"><strong>Стоимость:</strong> 1000 руб (50% предоплата)</p>
                         </div>
-                        <div class="order__grid order__grid-item-3">
+                        <div class="order__grid">
                             <p class="p--height p--color-sd">Тариф «<strong>Индивидуальный</strong>»</p>
                             <p class="p--height p--color-bg">
                                 <strong>Срок изготовления:</strong> индивидуально<br>
@@ -76,10 +76,11 @@
                 </div>
 
             </section>
-            <section class="contacts"></section>
-            <section class="comment"></section>
-            <section class="portfolio"></section>
+            <section id="contacts" class="contacts invis"></section>
+            <section id="comment" class="comment invis">hello comment</section>
+            <section id="portfolio" class="portfolio invis">hello portfolio</section>
         </main>
+        <!-- TODO: Fix footer position -->
         <footer class="footer">
             <p class="p p--height footer__p"><a href="https://github.com/raziEiL" target="_blank" class="footer__link">Medvedev Denis «raziEiL»</a><br>© 2019 </p>
         </footer>
