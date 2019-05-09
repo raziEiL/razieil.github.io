@@ -48,7 +48,7 @@ function btnOnClick(val) {
 // Nav logic
 const LINK_ARRAY = document.getElementById("nav__list").getElementsByTagName("a");
 var selectedNav = document.getElementById("nav__link-selected");
-const SECTION_NAMES = ["order", "contacts", "comment", "portfolio"]; // must equal to LINK_ARRAY len
+const SECTION_NAMES = ["order", "contacts", "portfolio", "comment"]; // must equal to LINK_ARRAY len
 var selectedSection = document.getElementById(SECTION_NAMES[0]);
 
 for (let i = 0; i < SECTION_NAMES.length; i++) {
