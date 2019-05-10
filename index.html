@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Tooday</title>
+        <title>for TooDAy</title>
         <link rel="stylesheet" type="text/css" href="styles/style.css">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&amp;subset=cyrillic" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="styles/normalize.css">
@@ -24,7 +24,7 @@
             </nav>
             <main class="main">
                 <section id="order" class="order">
-                    <h1 class="h1">Подготовка учебных презентаций на любую тематику!</h1>
+                    <h1 class="h h--center order__h1">Подготовка учебных презентаций на любую тематику!</h1>
                     <ul class="order__list">
                         <li class="order__item p--height">Выбираете тариф, жмёте «заказать»</li>
                         <li class="order__item p--height">Прикрепляете к письму материалы, отправляете;</li>
@@ -33,7 +33,7 @@
                     <p class="p--height">Гарантированно всё будет сделано точно в срок и с учетом Ваших пожеланий, а вы пока сможете отдохнуть!</p>
                     <div class="order__container">
                         <div class="order__grid-container">
-                            <div class="order__grid">
+                            <div class="order__grid anim-translition">
                                 <p class="p--height p--color-sd">Тариф «<strong>Золотой стандарт</strong>»</p>
                                 <p class="p p--height p--color-bg">
                                     <strong>Срок изготовления:</strong> 1 неделя<br>
@@ -42,8 +42,7 @@
                                     <strong>Стоимость:</strong> 500 руб (без предоплаты)
                                 </p>
                             </div>
-                            <!-- <strong></strong><br> -->
-                            <div class="order__grid">
+                            <div class="order__grid anim-translition">
                                 <p class="p--height p--color-sd">Тариф «<strong>За день/Мини</strong>»</p>
                                 <ol class="order__list">
                                     <li class="order__item p--height p--color-bg">
@@ -61,7 +60,7 @@
                                 </ol>
                                 <p class="p p--height p--color-bg"><strong>Стоимость:</strong> 1000 руб (50% предоплата)</p>
                             </div>
-                            <div class="order__grid">
+                            <div class="order__grid anim-translition">
                                 <p class="p--height p--color-sd">Тариф «<strong>Индивидуальный</strong>»</p>
                                 <p class="p--height p--color-bg">
                                     <strong>Срок изготовления:</strong> индивидуально<br>
@@ -71,7 +70,7 @@
                                 <p class="p p--height p--color-bg">Индивидуальный расчет с учетом ваших сроков, объемов и пожеланий по изготовлению. От 200 руб за слайд по полной предоплате.</p>
                             </div>
                         </div>
-                        <button class="button order__grid p--color-bg">Заказать</button>
+                        <button class="order__grid order__button p--color-bg anim-translition">Заказать</button>
                     </div>
 
                 </section>
@@ -79,7 +78,50 @@
                     <p class="p--height">Надежда, тел: 8-908-888-88-88</p>
                     <p class="p p--height"><a href="mailto:555@33.ru" class="link">E-mail: 555@33.ru</a></p>
                 </section>
-                <section id="portfolio" class="portfolio invis">hello portfolio</section>
+                <section id="portfolio" class="portfolio invis">
+                    <div class="portfolio__container">
+                        <a href="#" class="portfolio__link">
+                            <div class="portfolio__grid">
+                                <h3 class="h">Название проекта</h3>
+                                <p class="portfolio__p">Описание проекта</p>
+                                <img src="images/pic-1-1.jpg" alt="Icon made by Freepik from www.flaticon.com" class="porfolio__img">
+                                <div class="portfolio__overlay anim-translition">
+                                    <p class="p p--color-sd p--overlay-mix portfolio__overlay-p"><strong>открыть проект</strong></p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="portfolio__link">
+                            <div class="portfolio__grid">
+                                <h3 class="h">Название проекта</h3>
+                                <p class="portfolio__p">Описание проекта</p>
+                                <img src="images/pic-16-19.jpg" alt="Icon made by Freepik from www.flaticon.com" class="porfolio__img">
+                                <div class="portfolio__overlay anim-translition">
+                                    <p class="p p--color-sd p--overlay-mix portfolio__overlay-p"><strong>открыть проект</strong></p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="portfolio__link">
+                            <div class="portfolio__grid">
+                                <h3 class="h">Название проекта</h3>
+                                <p class="portfolio__p">Описание проекта</p>
+                                <img src="images/pic-250x141.jpg" alt="Icon made by Freepik from www.flaticon.com" class="porfolio__img">
+                                <div class="portfolio__overlay anim-translition">
+                                    <p class="p p--color-sd p--overlay-mix portfolio__overlay-p"><strong>открыть проект</strong></p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="portfolio__link">
+                            <div class="portfolio__grid">
+                                <h3 class="h">Название проекта</h3>
+                                <p class="portfolio__p">Описание проекта</p>
+                                <img src="images/pic-cover.jpg" alt="Icon made by Freepik from www.flaticon.com" class="porfolio__img">
+                                <div class="portfolio__overlay anim-translition">
+                                    <p class="p p--color-sd p--overlay-mix portfolio__overlay-p"><strong>открыть проект</strong></p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </section>
                 <section id="comment" class="comment invis">
                     <div class="comment__container">
                         <blockquote class="blockquote">

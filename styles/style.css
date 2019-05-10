@@ -68,7 +68,7 @@ q {
     margin-right: auto;
     color: var(--color-pr);
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 15px;
 }
 
@@ -117,10 +117,8 @@ q {
 
 .order {}
 
-.h1 {
-    text-align: center;
+.order__h1 {
     margin-bottom: 40px;
-    color: var(--color-pr);
 }
 
 .order__list {
@@ -160,18 +158,71 @@ q {
     cursor: pointer;
 }
 
-.button {
+.order__button {
     display: block;
     background: var(--color-pr);
     padding: 10px 40px;
     margin: 0 auto;
 }
 
+.portfolio__container {
+    display: grid;
+    grid-gap: 0;
+    grid-template-columns: repeat(auto-fill, minmax(430px, 1fr));
+}
+
+.portfolio__grid {
+    position: relative;
+    padding: 25px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.portfolio__grid:hover {
+    box-shadow: 0 3px 10px hsla(0, 0%, 0%, 0.4);
+}
+
+.porfolio__img {
+    display: block;
+    max-height: 300px;
+    max-width: 100%;
+}
+
+.portfolio__link {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.portfolio__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: var(--color-pr);
+    outline: 2px solid var(--color-bg);
+    outline-offset: -24px;
+    opacity: 0;
+}
+
+.portfolio__overlay:hover {
+    opacity: 0.7;
+}
+
+.portfolio__overlay-p {
+    position: inherit;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
 .blockquote {
     border-left: 5px solid var(--color-hl);
     margin-bottom: 2em;
     padding-left: 1em;
-    /*  font-family: serif; */
 }
 
 .blockquote:before {
@@ -225,6 +276,14 @@ q {
 }
 
 /* Common Classes */
+.h {
+    color: var(--color-pr);
+}
+
+.h--center {
+    text-align: center;
+}
+
 .p {
     margin-bottom: 0;
 }
@@ -241,8 +300,14 @@ q {
     color: var(--color-sd);
 }
 
+.p--overlay-mix {
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    word-spacing: 0.4rem;
+}
+
 .link {
-    color: black;
+    color: inherit;
 }
 
 .link--gray {
@@ -256,4 +321,10 @@ q {
 
 .link:visited {
     color: var(--color-s);
+}
+
+.anim-translition {
+    -webkit-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    transition: all .3s ease-out;
 }
