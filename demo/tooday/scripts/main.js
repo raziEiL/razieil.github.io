@@ -12,8 +12,8 @@ var j;
 
 // Tarif logic
 for (let i = 0; i < BTN_ARRAY.length; i++) {
-    BTN_ARRAY[i].addEventListener("click", function () {
-        btnOnClick(i)
+    BTN_ARRAY[i].addEventListener("click", function() {
+        btnOnClick(i);
     });
 }
 
@@ -25,7 +25,8 @@ function btnOnClick(val) {
         if (index === undefined) {
             console.log("выберите тариф");
             alert("Выберите тариф!");
-        } else {
+        }
+        else {
             console.log("mailto:" + EMAIL + "?subject=" + TARIF[index]);
             window.location.href = "mailto:" + EMAIL + "?subject=" + TARIF[index];
             // reset
@@ -34,7 +35,8 @@ function btnOnClick(val) {
 
             BTN_ARRAY[BTN_INDEX].style.borderColor = null;
         }
-    } else {
+    }
+    else {
         index = val;
         console.log("set bg to", COLOR_S);
 
@@ -52,7 +54,7 @@ const SECTION_NAMES = ["order", "contacts", "portfolio", "comment"]; // must equ
 var selectedSection = document.getElementById(SECTION_NAMES[0]);
 
 for (let i = 0; i < SECTION_NAMES.length; i++) {
-    LINK_ARRAY[i].addEventListener("click", function () {
+    LINK_ARRAY[i].addEventListener("click", function() {
         linkOnClick(this, document.getElementById(SECTION_NAMES[i]));
     });
 }
