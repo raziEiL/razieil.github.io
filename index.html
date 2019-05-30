@@ -1,61 +1,62 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 
     <head>
         <meta charset="UTF-8">
+        <meta name="author" content="Medvedev Denis raziEiL">
+        <meta name="description" content="Website demonstration">
+        <meta name="keywords" content="html,css,portfolio">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Денис Медведев | Портфолио программиста</title>
-        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="styles/normalize.css">
-        <link rel="stylesheet" type="text/css" href="styles/style.css">
+        <title>Медведев Денис - Портфолио. Заказать вёрстку.</title>
+        <script>
+            document.getElementsByTagName("html")[0].className += " js";
+        </script>
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/portfolio.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,400i,700&display=swap&subset=cyrillic" rel="stylesheet">
     </head>
 
     <body>
-        <nav class="nav">
-            <div class="nav__right">
-                <ul class="nav__list">
-                    <li class="nav__item"><a class="nav__link" href="#about">Обо мне</a></li>
-                    <li class="nav__item"><a class="nav__link" href="#">портфолио</a></li>
-                    <li class="nav__item"><a class="nav__link" href="#">случайные факты</a></li>
-                    <li class="nav__item"><a class="nav__link" href="#">контакты</a></li>
-                </ul>
-            </div>
-        </nav>
-        <section class="intro">
-            <div class="intro__elem1">
-                <img class="intro__img" src="images/photo.jpg" alt="My photo">
-            </div>
-            <pre class="intro__pre">{
-    <i>"message"</i>:      "<span>Привет, я</span>",
-    <i>"profile"</i>: {
-        <i>"name"</i>:     "<span>Денис Медведев</span>",
-        <i>"job"</i>:      "<span>Веб-разработчик</span>"
-    }
-}</pre>
-        </section>
+        <div class="main-container">
+            <div class="intro component-padding">
 
-        <section class="about">
-            <a href="#" id="about" class="anchor-fix"></a>
-            <h1 class="header header--color-odd">Обо мне</h1>
-            <div class="row">
-                <div class="col">
-                    <p class="text text--indent text--color-odd">Привет! Меня всегда тянуло заглянуть под &laquo;капот&raquo; и понять как устроен механизм. Нет, тачки меня интересовали только от части. Гораздо интереснее было узнавать как работают программы... Я поступил на специальность прикладной-информатики, а в свободное время увлекался программированием модов для разных игр.</p>
-                    <p class="text text--indent text--color-odd">Первые азы в веб-разработке, я получил во время учёбы. Одним из моих курсовых проектов была вёрстка &laquo;лэндинга&raquo; (Landing-Page). Подруга предложила дизайн, а я занялся вёрсткой. Результат мне понравился, а процесс показался увлекательным, интересным и не похожим на всё остальное, но это ведь только вершина айсберга, — подумал тогда я. Кстати, вы можете посмотреть этот &laquo;лэндинг&raquo; в разделе портфолио. По этому, чтобы идти в ногу со временем и создавать стильные, современные сайты я решил углубиться в этом направлении программирования и стать Front-End разработчиком.</p>
-                    <p class="text text--indent text--color-odd">Я окончил онлайн курс &laquo;<a class="link" href="https://www.freecodecamp.org/certification/razieil/responsive-web-design" target="_blank">Отзывчивый&#x2005;веб-дизайн</a>&raquo; и закрепил фундаментальные знания, а так же сверстал несколько проектов для портфолио. Сейчас я изучаю курс по JavaScript на ресурсе <a class="link" href="https://www.freecodecamp.org/" target="_blank">freeCodeCamp</a> и продолжаю свой рост как специалист.</p>
+                <div class="intro__text intro__flex">
+                    <p class="text--color-white text--center text--shadow-md margin-bottom--xxs">Привет я, <strong>Медведев Денис</strong> — <span class="text--color-primary-lighter">HTML-верстальщик</span> и начинающий <span class="text--color-primary-lighter">веб-разработчик</span>.</p>
+                    <h1 class="text--color-white text--center text--shadow-md margin-bottom--xxs">Давайте создадим веб-сайт, который выглядит прекрасно и действительно работает</h1>
+                    <p class="text--color-white text--center text--shadow-md">Вёрстка по макету: Landing page, многостраничный сайт.</p>
                 </div>
-                <div class="col">
-                    <h3 class="header--color-odd">Технологии, которые я использую:</h3>
-                    <ul class="about__list text text--color-odd">
-                        <li class="about__item"><b>HTML5</b> — Создаю каркас и структуру сайта;</li>
-                        <li class="about__item"><b>CSS3</b> — Применяю, чтобы сделать ваши сайты красивыми!;</li>
-                        <li class="about__item"><b>JavaScript</b> — Программирую интерактивность и логику (слайдеры, карусели, счетчики);</li>
-                        <li class="about__item"><b>Bootstrap</b> — Ускоряю процесс вёрстки с помощью фреймворков;</li>
-                        <li class="about__item"><b>БЭМ</b> — Придерживаюсь методологии вёрстки, чтобы сделать код читабельнее;</li>
-                        <li class="about__item"><b>Git</b> — Сохраняю проект, а если что-то пойдет не так я всегда смогу откатить измнения;</li>
-                    </ul>
+                <div class="intro__next intro__flex">
+                    <p class="text--color-accent-lighter text--center text--shadow-md margin-bottom--sm">Работаю ответственно, качественно и не дорого.</p>
+                    <img class="intro__img" src="assets/img/button.png" alt="К следующему блоку">
                 </div>
-        </section>
+            </div>
+        </div>
+        <!-- <form>
+            <fieldset class="margin-bottom--md">
+                <legend class="form-legend">Form Legend</legend>
+
+                <div class="margin-bottom--sm">
+                    <label class="form-label" for="inputName">Name:</label>
+                    <input class="form-control" type="text" name="inputName" id="inputName" required>
+                </div>
+
+                <div class="margin-bottom--sm">
+                    <label class="form-label" for="inputEmail">Email:</label>
+                    <input class="form-control" type="email" name="inputEmail" id="inputEmail" placeholder="email@myemail.com">
+                </div>
+
+                <div>
+                    <label class="form-label" for="textarea">Textarea:</label>
+                    <textarea class="form-control" name="textarea" id="textarea"></textarea>
+                </div>
+            </fieldset>
+
+            <div>
+                <button class="btn btn--primary">Submit</button>
+            </div>
+        </form> -->
+        <script src="assets/js/util.js"></script>
     </body>
 
 </html>
