@@ -8,10 +8,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 960px;
-    padding: 0 var(--space-md);
-    margin-right: auto;
-    margin-left: auto;
 }
 
 .nav__list {
@@ -90,7 +86,7 @@
 
 @media screen and (max-width: 768px) {
     .nav__container {
-        padding: var(--space-sm) var(--space-md);
+        padding: var(--space-sm) 0;
     }
     .nav__menu {
         display: flex;

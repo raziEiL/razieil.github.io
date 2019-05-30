@@ -1,7 +1,9 @@
 // Интро (full screen)
 .intro {
+    position: relative;
     height: 100vh;
     width: 100%;
+    min-height: 600px; // ~600px
     background-image: url(../img/background.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -16,10 +18,9 @@
     right: auto;
     bottom: auto;
     width: 100%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    padding: var(--space-xs);
+    padding-right: var(--space-xs);
+    padding-left: var(--space-xs);
 }
 
 .intro__next {
@@ -27,12 +28,12 @@
     top: auto;
     left: 50%;
     right: auto;
-    bottom: var(--space-xxxxs);
+    /*  bottom: var(--space-xxxxs); */
+    bottom: var(--space-md);
     width: 100%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    padding: var(--space-xs);
+    transform: translateX(-50%);
+    padding-right: var(--space-xs);
+    padding-left: var(--space-xs);
 }
 
 .intro__flex {

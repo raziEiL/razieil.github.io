@@ -2030,8 +2030,10 @@ Descr: A section containing a list of features
 }
 
 .intro {
+  position: relative;
   height: 100vh;
   width: 100%;
+  min-height: 600px;
   background-image: url(../img/background.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -2047,10 +2049,12 @@ Descr: A section containing a list of features
   bottom: auto;
   width: 100%;
   -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  padding: 0.5em;
-  padding: var(--space-xs);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding-right: 0.5em;
+  padding-right: var(--space-xs);
+  padding-left: 0.5em;
+  padding-left: var(--space-xs);
 }
 
 .intro__next {
@@ -2058,14 +2062,17 @@ Descr: A section containing a list of features
   top: auto;
   left: 50%;
   right: auto;
-  bottom: 0.125em;
-  bottom: var(--space-xxxxs);
+  /*  bottom: var(--space-xxxxs); */
+  bottom: 1.25em;
+  bottom: var(--space-md);
   width: 100%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  padding: 0.5em;
-  padding: var(--space-xs);
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  padding-right: 0.5em;
+  padding-right: var(--space-xs);
+  padding-left: 0.5em;
+  padding-left: var(--space-xs);
 }
 
 .intro__flex {
@@ -2095,11 +2102,6 @@ Descr: A section containing a list of features
       justify-content: space-between;
   -ms-flex-align: center;
       align-items: center;
-  max-width: 960px;
-  padding: 0 1.25em;
-  padding: 0 var(--space-md);
-  margin-right: auto;
-  margin-left: auto;
 }
 
 .nav__list {
@@ -2191,8 +2193,8 @@ Descr: A section containing a list of features
 /* гамбургер для навигации */
 @media screen and (max-width: 768px) {
   .nav__container {
-    padding: 0.75em 1.25em;
-    padding: var(--space-sm) var(--space-md);
+    padding: 0.75em 0;
+    padding: var(--space-sm) 0;
   }
   .nav__menu {
     display: -ms-flexbox;
