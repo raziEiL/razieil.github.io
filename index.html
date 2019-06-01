@@ -17,7 +17,7 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,400i,700&display=swap&subset=cyrillic" rel="stylesheet">
     </head>
 
-    <body>
+    <body onresize="onResize()">
         <div class="main-container">
             <div class="intro">
                 <div class="intro__text">
@@ -51,15 +51,26 @@
                 <div id="podhod" class="container__block text-component">
                     <h1>Подход к задаче</h1>
                     <div class="container__flex">
-                        <div class="containter__item">Всегда на связи</div>
-                        <div class="containter__item">Всегда на связи</div>
-                        <div class="containter__item">✓ Всегда поделюсь предложением, если ваш сайт можно сделать еще лучше</div>
-                        <div class="containter__item">Всегда на связи</div>
-                        <div class="containter__item">Всегда на связи</div>
-                        <div class="containter__item">Всегда на связи</div>
-                        <div class="containter__item">Всегда на связи</div>
-                        <div class="containter__item">Всегда на связи</div>
+                        <div class="containter__item"><svg class="container__icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="far" data-icon="check-circle" role="img" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 48c110.5 0 200 89.5 200 200 0 110.5-89.5 200-200 200-110.5 0-200-89.5-200-200 0-110.5 89.5-200 200-200m140.2 130.3l-22.5-22.7c-4.7-4.7-12.3-4.7-17-0.1L215.3 303.7l-59.8-60.3c-4.7-4.7-12.3-4.7-17-0.1l-22.7 22.5c-4.7 4.7-4.7 12.3-0.1 17l90.8 91.5c4.7 4.7 12.3 4.7 17l172.6-171.2c4.7-4.7 4.7-12.3-17z" fill="currentColor"/></svg>Приступаю
+                            сразу
+                        </div>
+                        <div class="containter__item"><svg class="container__icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="far" data-icon="check-circle" role="img" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 48c110.5 0 200 89.5 200 200 0 110.5-89.5 200-200 200-110.5 0-200-89.5-200-200 0-110.5 89.5-200 200-200m140.2 130.3l-22.5-22.7c-4.7-4.7-12.3-4.7-17-0.1L215.3 303.7l-59.8-60.3c-4.7-4.7-12.3-4.7-17-0.1l-22.7 22.5c-4.7 4.7-4.7 12.3-0.1 17l90.8 91.5c4.7 4.7 12.3 4.7 17l172.6-171.2c4.7-4.7 4.7-12.3-17z" fill="currentColor"/></svg>Всегда
+                            на связи</div>
+                        <div class="containter__item"><svg class="container__icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="far" data-icon="check-circle" role="img" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 48c110.5 0 200 89.5 200 200 0 110.5-89.5 200-200 200-110.5 0-200-89.5-200-200 0-110.5 89.5-200 200-200m140.2 130.3l-22.5-22.7c-4.7-4.7-12.3-4.7-17-0.1L215.3 303.7l-59.8-60.3c-4.7-4.7-12.3-4.7-17-0.1l-22.7 22.5c-4.7 4.7-4.7 12.3-0.1 17l90.8 91.5c4.7 4.7 12.3 4.7 17l172.6-171.2c4.7-4.7 4.7-12.3-17z" fill="currentColor"/></svg>Верстаю
+                            пиксель в пиксель</div>
+                        <div class="containter__item"><svg class="container__icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="far" data-icon="check-circle" role="img" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 48c110.5 0 200 89.5 200 200 0 110.5-89.5 200-200 200-110.5 0-200-89.5-200-200 0-110.5 89.5-200 200-200m140.2 130.3l-22.5-22.7c-4.7-4.7-12.3-4.7-17-0.1L215.3 303.7l-59.8-60.3c-4.7-4.7-12.3-4.7-17-0.1l-22.7 22.5c-4.7 4.7-4.7 12.3-0.1 17l90.8 91.5c4.7 4.7 12.3 4.7 17l172.6-171.2c4.7-4.7 4.7-12.3-17z" fill="currentColor"/></svg>Адаптивная
+                            вёрстка
+                        </div>
+                        <div class="containter__item"><svg class="container__icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="far" data-icon="check-circle" role="img" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 48c110.5 0 200 89.5 200 200 0 110.5-89.5 200-200 200-110.5 0-200-89.5-200-200 0-110.5 89.5-200 200-200m140.2 130.3l-22.5-22.7c-4.7-4.7-12.3-4.7-17-0.1L215.3 303.7l-59.8-60.3c-4.7-4.7-12.3-4.7-17-0.1l-22.7 22.5c-4.7 4.7-4.7 12.3-0.1 17l90.8 91.5c4.7 4.7 12.3 4.7 17l172.6-171.2c4.7-4.7 4.7-12.3-17z" fill="currentColor"/></svg>Полное
+                            соответсвие ТЗ</div>
+                        <div class="containter__item"><svg class="container__icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="far" data-icon="check-circle" role="img" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 48c110.5 0 200 89.5 200 200 0 110.5-89.5 200-200 200-110.5 0-200-89.5-200-200 0-110.5 89.5-200 200-200m140.2 130.3l-22.5-22.7c-4.7-4.7-12.3-4.7-17-0.1L215.3 303.7l-59.8-60.3c-4.7-4.7-12.3-4.7-17-0.1l-22.7 22.5c-4.7 4.7-4.7 12.3-0.1 17l90.8 91.5c4.7 4.7 12.3 4.7 17l172.6-171.2c4.7-4.7 4.7-12.3-17z" fill="currentColor"/></svg>Сайты
+                            выглядят одинаково во всех браузерах</div>
+                        <div class="containter__item"><svg class="container__icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="far" data-icon="check-circle" role="img" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 48c110.5 0 200 89.5 200 200 0 110.5-89.5 200-200 200-110.5 0-200-89.5-200-200 0-110.5 89.5-200 200-200m140.2 130.3l-22.5-22.7c-4.7-4.7-12.3-4.7-17-0.1L215.3 303.7l-59.8-60.3c-4.7-4.7-12.3-4.7-17-0.1l-22.7 22.5c-4.7 4.7-4.7 12.3-0.1 17l90.8 91.5c4.7 4.7 12.3 4.7 17l172.6-171.2c4.7-4.7 4.7-12.3-17z" fill="currentColor"/></svg>До
+                            2х недель бесплатной поддержки по завершению заказа</div>
+                        <div class="containter__item"><svg class="container__icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="far" data-icon="check-circle" role="img" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 48c110.5 0 200 89.5 200 200 0 110.5-89.5 200-200 200-110.5 0-200-89.5-200-200 0-110.5 89.5-200 200-200m140.2 130.3l-22.5-22.7c-4.7-4.7-12.3-4.7-17-0.1L215.3 303.7l-59.8-60.3c-4.7-4.7-12.3-4.7-17-0.1l-22.7 22.5c-4.7 4.7-4.7 12.3-0.1 17l90.8 91.5c4.7 4.7 12.3 4.7 17l172.6-171.2c4.7-4.7 4.7-12.3-17z" fill="currentColor"/></svg>Всегда
+                            поделюсь предложением, если ваш сайт можно сделать еще лучше</div>
                     </div>
+                    <div id="js-grid-fix">get hight</div>
                 </div>
                 <div id="about" class="container__block text-component">
                     <h1>Обо мне</h1>

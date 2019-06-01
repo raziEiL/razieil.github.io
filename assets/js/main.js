@@ -17,3 +17,30 @@ function ToggleClass(elem, toggle) {
         elem.className += " " + toggle;
     }
 }
+
+// Фикс для изменения значений grid-row
+var hiddenDiv = document.getElementById("js-grid-fix"); //  узнаем высоту однострочного элемента
+const ITEM_ARRAY = document.getElementsByClassName("containter__item");
+var lineHeight;
+
+if (hiddenDiv != null) {
+    lineHeight = hiddenDiv.offsetHeight;
+    console.log("line height =", lineHeight);
+    fixGridRow();
+}
+else {
+    console.log("Error id=js-grid-fix not found");
+}
+
+function onResize() {
+    console.log("width = ", window.outerWidth, "height =", window.outerHeight);
+    fixGridRow();
+}
+
+function fixGridRow() {
+    if (lineHeight === undefined)
+        return;
+    for (let i = 0; i < ITEM_ARRAY.length; i++) {
+        ITEM_ARRAY[i].style.gridRow = "span " + Math.round(ITEM_ARRAY[i].offsetHeight / lineHeight);
+    }
+}
