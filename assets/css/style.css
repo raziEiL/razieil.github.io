@@ -2091,8 +2091,13 @@ Descr: A section containing a list of features
 }
 
 .nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
   width: 100%;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  background: hsl(0, 0%, 100%);
+  background: var(--color-bg);
 }
 
 .nav__container {
@@ -2118,6 +2123,8 @@ Descr: A section containing a list of features
   margin-right: 1.25em;
   margin-right: var(--space-md);
   text-transform: lowercase;
+  font-size: 1.125em;
+  font-size: calc(var(--text-base-size)*1.125);
 }
 
 .nav__list > .nav__item:last-child {
@@ -2191,7 +2198,7 @@ Descr: A section containing a list of features
 }
 
 /* гамбургер для навигации */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 64rem) {
   .nav__container {
     padding: 0.75em 0;
     padding: var(--space-sm) 0;

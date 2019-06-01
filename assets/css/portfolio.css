@@ -1,8 +1,28 @@
-/* portfolio.css */
+.test {
+    width: 100px;
+    height: 100px;
+    background: orange;
+    padding: var(--space-xs);
+}
 
+.container__block {
+    padding: var(--component-padding) 0;
+    border-bottom: var(--space-xxxs) solid var(--color-primary);
+}
 
-/* .about {
-    max-width: 960px;
-    margin-right: auto;
-    margin-left: auto;
-} */
+.container__block:last-child {
+    border: none;
+}
+
+.container__flex {
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; */
+    display: grid;
+    /* grid-gap: 15px; */
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+}
+
+.containter__item {
+    align-self: start;
+}

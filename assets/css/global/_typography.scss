@@ -12,7 +12,7 @@
     --text-lg: calc(var(--text-md) * var(--text-scale-ratio));
     --text-xl: calc(var(--text-lg) * var(--text-scale-ratio));
     --text-xxl: calc(var(--text-xl) * var(--text-scale-ratio));
-    --text-xxxl: calc(var(--text-xxl) * var(--text-scale-ratio));
+    --text-xxxl: calc(var(--text-xxl) * var(--text-scale-ratio)); // 2,0736
     // line-height
     --body-line-height: 1.25;
     --heading-line-height: 1.25;

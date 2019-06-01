@@ -1,7 +1,10 @@
 // Навигация
 .nav {
+    position: sticky;
+    top: 0;
     width: 100%;
     box-shadow: 0 1px 2px hsla(0, 0%, 0%, 0.3);
+    background: var(--color-bg);
 }
 
 .nav__container {
@@ -21,6 +24,7 @@
 .nav__item {
     margin-right: var(--space-md);
     text-transform: lowercase;
+    font-size: calc(var(--text-base-size) * 1.125);
 }
 
 .nav__list>.nav__item:last-child {
@@ -84,7 +88,7 @@
 
 /* гамбургер для навигации */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 64rem) {
     .nav__container {
         padding: var(--space-sm) 0;
     }
