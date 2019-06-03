@@ -1,5 +1,5 @@
 .container__block {
-    padding: var(--component-padding) 0;
+    padding: var(--space-md) 0;
     border-bottom: var(--space-xxxs) solid var(--color-primary);
 }
 
@@ -14,25 +14,22 @@
     display: grid;
     grid-gap: var(--space-xs) var(--space-md);
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    align-items: start;
 }
 
-.containter__item {
-    
+.containter__item {}
+
+#containter__item-fake {
+    position: absolute;
+    visibility: hidden;
+    height: auto;
+    width: auto;
+    white-space: nowrap;
 }
 
 .container__icon {
     width: 1em;
     height: 1em;
     float: left;
-    margin: 0.15em var(--space-xs) 0 0;
+    margin: 0.1em var(--space-xs) 0 0;
     color: var(--color-accent);
-}
-
-#js-grid-fix {
-    position: absolute;
-    visibility: hidden;
-    height: auto;
-    width: auto;
-    white-space: nowrap;
 }

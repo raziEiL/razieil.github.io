@@ -18,29 +18,32 @@ function ToggleClass(elem, toggle) {
     }
 }
 
-// Фикс для изменения значений grid-row
-var hiddenDiv = document.getElementById("js-grid-fix"); //  узнаем высоту однострочного элемента
+// https://codepen.io/razieil/pen/arPVmX
+var hiddenDiv = document.getElementById("containter__item-fake");
 const ITEM_ARRAY = document.getElementsByClassName("containter__item");
+const GRID = document.getElementsByClassName("container__flex")[0];
 var lineHeight;
 
 if (hiddenDiv != null) {
     lineHeight = hiddenDiv.offsetHeight;
     console.log("line height =", lineHeight);
-    fixGridRow();
+    alignGridRows();
 }
 else {
-    console.log("Error id=js-grid-fix not found");
+    console.log("Error id=containter__item-fake not found");
 }
 
 function onResize() {
     console.log("width = ", window.outerWidth, "height =", window.outerHeight);
-    fixGridRow();
+    alignGridRows();
 }
 
-function fixGridRow() {
+function alignGridRows() {
     if (lineHeight === undefined)
         return;
+    GRID.style.alignItems = "start";
     for (let i = 0; i < ITEM_ARRAY.length; i++) {
         ITEM_ARRAY[i].style.gridRow = "span " + Math.round(ITEM_ARRAY[i].offsetHeight / lineHeight);
     }
+    GRID.style.alignItems = null;
 }

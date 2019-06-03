@@ -11,7 +11,7 @@
     --space-xxl: calc(5.25 * var(--space-unit)); // 84px
     --space-xxxl: calc(8.5 * var(--space-unit));
     --space-xxxxl: calc(13.75 * var(--space-unit));
-    --component-padding: var(--space-md);
+    --component-padding: var(--space-unit);
 }
 
 // optional - edit space unit and padding of all components at a specific breakpoint

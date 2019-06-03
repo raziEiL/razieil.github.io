@@ -241,7 +241,7 @@ img, video, svg {
   --space-xxl: calc(5.25*var(--space-unit));
   --space-xxxl: calc(8.5*var(--space-unit));
   --space-xxxxl: calc(13.75*var(--space-unit));
-  --component-padding: var(--space-md);
+  --component-padding: var(--space-unit);
 }
 
 @supports (--css: variables) {
@@ -368,7 +368,7 @@ img, video, svg {
 }
 
 .component-padding {
-  padding: 1.25em;
+  padding: 1em;
   padding: var(--component-padding);
 }
 
@@ -381,7 +381,7 @@ img, video, svg {
 }
 
 .container {
-  width: calc(100% - 1.25em);
+  width: calc(100% - 2em);
   width: calc(100% - 2*var(--component-padding));
   margin-left: auto;
   margin-right: auto;
@@ -1265,6 +1265,11 @@ h4, .text--md {
   font-size: var(--text-xs);
 }
 
+.text--custom, .nav__item {
+  font-size: 1.125em;
+  font-size: calc(var(--text-base-size)*1.125);
+}
+
 a, .link {
   color: hsl(203, 59%, 30%);
   color: var(--color-primary);
@@ -1287,6 +1292,10 @@ s {
 
 u {
   text-decoration: underline;
+}
+
+i {
+  font-style: italic;
 }
 
 .text--subtle, .text-component .text--subtle {
@@ -1453,7 +1462,7 @@ u {
   white-space: nowrap;
 }
 
-.text--center {
+.text--center, .intro__invert-text, .intro__invert-text-accent-lighter {
   text-align: center;
 }
 
@@ -1480,7 +1489,7 @@ u {
   color: var(--color-accent);
 }
 
-.text--color-accent-lighter {
+.text--color-accent-lighter, .intro__invert-text-accent-lighter {
   color: hsl(171, 67%, 67%);
   color: var(--color-accent-lighter);
 }
@@ -1490,7 +1499,7 @@ u {
   color: var(--color-contrast-low);
 }
 
-.text--color-white {
+.text--color-white, .intro__invert-text {
   color: hsl(0, 0%, 100%);
   color: var(--color-white);
 }
@@ -2041,6 +2050,13 @@ Descr: A section containing a list of features
   background-size: cover;
 }
 
+.intro__text, .intro__next {
+  padding-right: 1em;
+  padding-right: var(--component-padding);
+  padding-left: 1em;
+  padding-left: var(--component-padding);
+}
+
 .intro__text {
   position: absolute;
   top: 50%;
@@ -2051,10 +2067,6 @@ Descr: A section containing a list of features
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  padding-right: 0.5em;
-  padding-right: var(--space-xs);
-  padding-left: 0.5em;
-  padding-left: var(--space-xs);
 }
 
 .intro__next {
@@ -2062,17 +2074,12 @@ Descr: A section containing a list of features
   top: auto;
   left: 50%;
   right: auto;
-  /*  bottom: var(--space-xxxxs); */
   bottom: 1.25em;
   bottom: var(--space-md);
   width: 100%;
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
-  padding-right: 0.5em;
-  padding-right: var(--space-xs);
-  padding-left: 0.5em;
-  padding-left: var(--space-xs);
 }
 
 .intro__flex {
@@ -2086,8 +2093,13 @@ Descr: A section containing a list of features
       justify-content: center;
 }
 
-.text--shadow-md {
+.text--shadow-md, .intro__invert-text, .intro__invert-text-accent-lighter {
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.intro__invert-text, .intro__invert-text-accent-lighter {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .nav {
@@ -2123,8 +2135,6 @@ Descr: A section containing a list of features
   margin-right: 1.25em;
   margin-right: var(--space-md);
   text-transform: lowercase;
-  font-size: 1.125em;
-  font-size: calc(var(--text-base-size)*1.125);
 }
 
 .nav__list > .nav__item:last-child {

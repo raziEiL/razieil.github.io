@@ -24,7 +24,7 @@
 .nav__item {
     margin-right: var(--space-md);
     text-transform: lowercase;
-    font-size: calc(var(--text-base-size) * 1.125);
+    @extend .text--custom;
 }
 
 .nav__list>.nav__item:last-child {
