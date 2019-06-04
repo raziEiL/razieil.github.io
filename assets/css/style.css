@@ -1265,7 +1265,7 @@ h4, .text--md {
   font-size: var(--text-xs);
 }
 
-.text--custom, .nav__item {
+.text--custom {
   font-size: 1.125em;
   font-size: calc(var(--text-base-size)*1.125);
 }
@@ -1317,8 +1317,10 @@ i {
 .text-component h1, .text-component h2, .text-component h3, .text-component h4 {
   line-height: 1.25;
   line-height: var(--component-heading-line-height);
-  margin-bottom: 0.25em;
-  margin-bottom: calc(var(--space-xxxs)*var(--text-vspace-multiplier));
+  margin-bottom: 0.5em;
+  margin-bottom: calc(var(--space-xs)*var(--text-vspace-multiplier));
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .text-component h2, .text-component h3, .text-component h4 {
@@ -2127,14 +2129,16 @@ Descr: A section containing a list of features
   list-style: none;
   margin: 0;
   /* padding = nav__link {padding + border} */
-  padding: 0.75em 0;
-  padding: var(--space-sm) 0;
 }
 
 .nav__item {
-  margin-right: 1.25em;
-  margin-right: var(--space-md);
-  text-transform: lowercase;
+  margin-right: 0.75em;
+  margin-right: var(--space-sm);
+  text-transform: uppercase;
+  font-family: 'Roboto Slab', serif;
+  font-family: var(--font-secondary);
+  font-size: 0.875em;
+  font-size: calc(var(--text-base-size)*0.875);
 }
 
 .nav__list > .nav__item:last-child {
@@ -2142,7 +2146,10 @@ Descr: A section containing a list of features
 }
 
 .nav__link {
+  display: block;
   text-decoration: none;
+  padding-top: 0.75em;
+  padding-top: var(--space-sm);
   padding-bottom: calc(0.75em - 3px);
   padding-bottom: calc(var(--space-sm) - 3px);
   border-bottom: 3px solid rgba(0, 0, 0, 0);
@@ -2251,6 +2258,7 @@ Descr: A section containing a list of features
     margin-bottom: 0;
   }
   .nav__link {
+    padding-top: 0;
     padding-bottom: 0;
     border-bottom: 2px solid rgba(0, 0, 0, 0);
   }

@@ -1,5 +1,5 @@
 .container__block {
-    padding: var(--space-md) 0;
+    padding: var(--space-lg) 0;
     border-bottom: var(--space-xxxs) solid var(--color-primary);
 }
 
@@ -32,4 +32,15 @@
     float: left;
     margin: 0.1em var(--space-xs) 0 0;
     color: var(--color-accent);
+}
+
+.about {
+    max-width: 70ch;
+}
+
+a.anchor-fix {
+    display: block;
+    position: relative;
+    top: calc(50px * -1);
+    visibility: hidden;
 }
