@@ -19,9 +19,9 @@ function ToggleClass(elem, toggle) {
 }
 
 // https://codepen.io/razieil/pen/arPVmX
-var hiddenDiv = document.getElementById("containter__item-fake");
-const ITEM_ARRAY = document.getElementsByClassName("containter__item");
-const GRID = document.getElementsByClassName("container__flex")[0];
+var hiddenDiv = document.getElementById("advantages__item-fake");
+const ITEM_ARRAY = document.getElementsByClassName("advantages__item");
+const GRID = document.getElementsByClassName("advantages__grid")[0];
 var lineHeight;
 
 if (hiddenDiv != null) {
@@ -30,7 +30,7 @@ if (hiddenDiv != null) {
     alignGridRows();
 }
 else {
-    console.log("Error id=containter__item-fake not found");
+    console.log("Error id=advantages__item-fake not found");
 }
 
 function onResize() {
