@@ -48,6 +48,10 @@ h1, h2, h3, h4 {
     font-family: var(--font-secondary);
 }
 
+p {
+    line-height: var(--body-line-height);
+}
+
 // text size
 .text--xxxl {
     font-size: var(--text-xxxl);
@@ -123,13 +127,11 @@ i {
     --text-vspace-multiplier: 1;
     h1, h2, h3, h4 {
         line-height: var(--component-heading-line-height);
-        margin-bottom: calc(var(--space-xs) * var(--text-vspace-multiplier));
-        text-align: center;
-        text-transform: uppercase;
+        margin-bottom: calc(var(--space-xxxs) * var(--text-vspace-multiplier));
     }
-    h2, h3, h4 {
+    /* h2, h3, h4 {
         margin-top: calc(var(--space-sm) * var(--text-vspace-multiplier));
-    }
+    } */
     p, blockquote, ul li, ol li {
         line-height: var(--component-body-line-height);
         color: var(--color-contrast-high);
@@ -259,28 +261,4 @@ i {
 
 .text--right {
     text-align: right;
-}
-
-.text--color-primary {
-    color: var(--color-primary);
-}
-
-.text--color-primary-lighter {
-    color: var(--color-primary-lighter);
-}
-
-.text--color-accent-accent {
-    color: var(--color-accent);
-}
-
-.text--color-accent-lighter {
-    color: var(--color-accent-lighter);
-}
-
-.text--color-contrast-low {
-    color: var(--color-contrast-low);
-}
-
-.text--color-white {
-    color: var(--color-white);
 }

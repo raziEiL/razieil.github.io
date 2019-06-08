@@ -1,94 +1,174 @@
 <!doctype html>
 <html lang="ru">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="author" content="Medvedev Denis raziEiL">
-        <meta name="description" content="Website demonstration">
-        <meta name="keywords" content="html,css,portfolio">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Медведев Денис - Портфолио. Заказать вёрстку.</title>
-        <script>
-            document.getElementsByTagName("html")[0].className += " js";
-        </script>
-        <link rel="stylesheet" href="assets/css/style.css">
-        <link rel="stylesheet" href="assets/css/portfolio.css">
-        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,400i,700&display=swap&subset=cyrillic" rel="stylesheet">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Medvedev Denis raziEiL">
+    <meta name="description" content="Website demonstration">
+    <meta name="keywords" content="html,css,portfolio">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Медведев Денис - Портфолио. Заказать вёрстку.</title>
+    <script>
+        document.getElementsByTagName("html")[0].className += " js";
+    </script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/portfolio.css">
+    <!-- <link rel="stylesheet" href="assets/css/box-shadows.css"> -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,400i,700&display=swap&subset=cyrillic" rel="stylesheet">
+</head>
 
-    <body onresize="onResize()">
-        <section class="intro">
-            <div class="intro__text">
-                <h1 class="intro__invert-text text--custom margin-bottom--xxs"><strong>Медведев Денис</strong> — <span class="text--color-primary-lighter">HTML-верстальщик</span> и начинающий <span class="text--color-primary-lighter">веб-разработчик</span>.</h1>
-                <h2 class="intro__invert-text text--xxl margin-bottom--xxs">Давайте создадим веб-сайт, который выглядит прекрасно и действительно работает</h2>
-                <p class="intro__invert-text">Вёрстка по макету: Landing page, многостраничный сайт.</p>
+<body onresize="onResize()">
+    <section class="intro">
+        <div class="intro__text">
+            <h1 class="intro__invert-text text--custom margin-bottom--xxs"><strong>Медведев Денис</strong> — <span class="color--primary-lighter">HTML-верстальщик</span> и начинающий <span class="color--primary-lighter">веб-разработчик</span>.</h1>
+            <h2 class="intro__invert-text text--xxl margin-bottom--xxs">Давайте создадим веб-сайт, который выглядит прекрасно и действительно работает</h2>
+            <p class="intro__invert-text">Вёрстка по макету: Landing page, многостраничный сайт.</p>
+        </div>
+        <div class="intro__next intro__flex">
+            <p class="intro__invert-text-accent-lighter margin-bottom--sm"><i>Работаю ответственно, качественно и не дорого.</i></p>
+            <img class="intro__img" src="assets/img/button.png" alt="К следующему блоку">
+        </div>
+    </section>
+    <nav class="nav">
+        <div class="nav__container container container--md">
+            <div class="nav__logo">
+                <h3 class="color--primary">&#60;raziEiL&#47;&#62;</h3>
             </div>
-            <div class="intro__next intro__flex">
-                <p class="intro__invert-text-accent-lighter margin-bottom--sm"><i>Работаю ответственно, качественно и не дорого.</i></p>
-                <img class="intro__img" src="assets/img/button.png" alt="К следующему блоку">
+            <div class="nav__menu">
+                <ul id="nav__list" class="nav__list transition">
+                    <li class="nav__item"><a class="nav__link" href="#advantages">подход</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#about">обо мне</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#">портфолио</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#">случайные факты</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#">контакты</a></li>
+                </ul>
+                <span class="nav__span"></span>
+            </div>
+        </div>
+    </nav>
+    <main class="container container--md">
+        <section id="advantages" class="container-block--lg">
+            <h3 class="text-header">Подход к задаче</h3>
+            <div class="container-block--sm">
+                <div class="advantages__grid">
+                    <div class="advantages__item text-component">
+                        <h4><svg class="svg-icon svg-icon--left color--accent" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="far" data-icon="check-circle" role="img" viewBox="0 0 512 512">
+                                <path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 48c110.5 0 200 89.5 200 200 0 110.5-89.5 200-200 200-110.5 0-200-89.5-200-200 0-110.5 89.5-200 200-200m140.2 130.3l-22.5-22.7c-4.7-4.7-12.3-4.7-17-0.1L215.3 303.7l-59.8-60.3c-4.7-4.7-12.3-4.7-17-0.1l-22.7 22.5c-4.7 4.7-4.7 12.3-0.1 17l90.8 91.5c4.7 4.7 12.3 4.7 17l172.6-171.2c4.7-4.7 4.7-12.3-17z" fill="currentColor" /></svg>Ответственность</h4>
+                        <div class="container-block--xs">
+                            <p>Приступаю сразу</p>
+                            <p>Всегда на связи</p>
+                            <p>Полное соответсвие ТЗ</p>
+                        </div>
+                    </div>
+                    <div class="advantages__item text-component">
+                        <h4><svg class="svg-icon svg-icon--left color--accent" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="far" data-icon="check-circle" role="img" viewBox="0 0 512 512">
+                                <path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 48c110.5 0 200 89.5 200 200 0 110.5-89.5 200-200 200-110.5 0-200-89.5-200-200 0-110.5 89.5-200 200-200m140.2 130.3l-22.5-22.7c-4.7-4.7-12.3-4.7-17-0.1L215.3 303.7l-59.8-60.3c-4.7-4.7-12.3-4.7-17-0.1l-22.7 22.5c-4.7 4.7-4.7 12.3-0.1 17l90.8 91.5c4.7 4.7 12.3 4.7 17l172.6-171.2c4.7-4.7 4.7-12.3-17z" fill="currentColor" /></svg>Качество</h4>
+                        <div class="container-block--xs">
+                            <p>Верстаю точно</p>
+                            <p>Адаптивная вёрстка</p>
+                            <p>Сайты выглядят одинаково во всех браузерах</p>
+                        </div>
+                    </div>
+                    <div class="advantages__item text-component">
+                        <h4><svg class="svg-icon svg-icon--left color--accent" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="far" data-icon="check-circle" role="img" viewBox="0 0 512 512">
+                                <path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 48c110.5 0 200 89.5 200 200 0 110.5-89.5 200-200 200-110.5 0-200-89.5-200-200 0-110.5 89.5-200 200-200m140.2 130.3l-22.5-22.7c-4.7-4.7-12.3-4.7-17-0.1L215.3 303.7l-59.8-60.3c-4.7-4.7-12.3-4.7-17-0.1l-22.7 22.5c-4.7 4.7-4.7 12.3-0.1 17l90.8 91.5c4.7 4.7 12.3 4.7 17l172.6-171.2c4.7-4.7 4.7-12.3-17z" fill="currentColor" /></svg>Отзывчивость</h4>
+                        <div class="container-block--xs">
+                            <p>До 2х недель бесплатной поддержки по завершению заказа</p>
+                            <p>Всегда поделюсь предложением, если ваш сайт можно сделать еще лучше</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
-        <nav class="nav">
-            <div class="nav__container container container--md">
-                <div class="nav__logo">
-                    <h3 class="text--color-primary">&#60;raziEiL&#47;&#62;</h3>
-                </div>
-                <div class="nav__menu">
-                    <ul id="nav__list" class="nav__list transition">
-                        <li class="nav__item"><a class="nav__link" href="#advantages">подход</a></li>
-                        <li class="nav__item"><a class="nav__link" href="#about">обо мне</a></li>
-                        <li class="nav__item"><a class="nav__link" href="#">портфолио</a></li>
-                        <li class="nav__item"><a class="nav__link" href="#">случайные факты</a></li>
-                        <li class="nav__item"><a class="nav__link" href="#">контакты</a></li>
-                    </ul>
-                    <span class="nav__span"></span>
-                </div>
-            </div>
-        </nav>
-        <div class="container container--md">
-            <section id="advantages" class="container-block text-component">
-                <h3>Подход к задаче</h3>
-                <div class="advantages__grid">
-                    <div class="advantages__item"><svg class="advantages__icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="far" data-icon="check-circle" role="img" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 48c110.5 0 200 89.5 200 200 0 110.5-89.5 200-200 200-110.5 0-200-89.5-200-200 0-110.5 89.5-200 200-200m140.2 130.3l-22.5-22.7c-4.7-4.7-12.3-4.7-17-0.1L215.3 303.7l-59.8-60.3c-4.7-4.7-12.3-4.7-17-0.1l-22.7 22.5c-4.7 4.7-4.7 12.3-0.1 17l90.8 91.5c4.7 4.7 12.3 4.7 17l172.6-171.2c4.7-4.7 4.7-12.3-17z" fill="currentColor"/></svg>Приступаю
-                        сразу
-                    </div>
-                    <div class="advantages__item"><svg class="advantages__icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="far" data-icon="check-circle" role="img" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 48c110.5 0 200 89.5 200 200 0 110.5-89.5 200-200 200-110.5 0-200-89.5-200-200 0-110.5 89.5-200 200-200m140.2 130.3l-22.5-22.7c-4.7-4.7-12.3-4.7-17-0.1L215.3 303.7l-59.8-60.3c-4.7-4.7-12.3-4.7-17-0.1l-22.7 22.5c-4.7 4.7-4.7 12.3-0.1 17l90.8 91.5c4.7 4.7 12.3 4.7 17l172.6-171.2c4.7-4.7 4.7-12.3-17z" fill="currentColor"/></svg>Всегда
-                        на связи</div>
-                    <div class="advantages__item"><svg class="advantages__icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="far" data-icon="check-circle" role="img" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 48c110.5 0 200 89.5 200 200 0 110.5-89.5 200-200 200-110.5 0-200-89.5-200-200 0-110.5 89.5-200 200-200m140.2 130.3l-22.5-22.7c-4.7-4.7-12.3-4.7-17-0.1L215.3 303.7l-59.8-60.3c-4.7-4.7-12.3-4.7-17-0.1l-22.7 22.5c-4.7 4.7-4.7 12.3-0.1 17l90.8 91.5c4.7 4.7 12.3 4.7 17l172.6-171.2c4.7-4.7 4.7-12.3-17z" fill="currentColor"/></svg>Верстаю
-                        пиксель в пиксель</div>
-                    <div class="advantages__item"><svg class="advantages__icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="far" data-icon="check-circle" role="img" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 48c110.5 0 200 89.5 200 200 0 110.5-89.5 200-200 200-110.5 0-200-89.5-200-200 0-110.5 89.5-200 200-200m140.2 130.3l-22.5-22.7c-4.7-4.7-12.3-4.7-17-0.1L215.3 303.7l-59.8-60.3c-4.7-4.7-12.3-4.7-17-0.1l-22.7 22.5c-4.7 4.7-4.7 12.3-0.1 17l90.8 91.5c4.7 4.7 12.3 4.7 17l172.6-171.2c4.7-4.7 4.7-12.3-17z" fill="currentColor"/></svg>Адаптивная
-                        вёрстка
-                    </div>
-                    <div class="advantages__item"><svg class="advantages__icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="far" data-icon="check-circle" role="img" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 48c110.5 0 200 89.5 200 200 0 110.5-89.5 200-200 200-110.5 0-200-89.5-200-200 0-110.5 89.5-200 200-200m140.2 130.3l-22.5-22.7c-4.7-4.7-12.3-4.7-17-0.1L215.3 303.7l-59.8-60.3c-4.7-4.7-12.3-4.7-17-0.1l-22.7 22.5c-4.7 4.7-4.7 12.3-0.1 17l90.8 91.5c4.7 4.7 12.3 4.7 17l172.6-171.2c4.7-4.7 4.7-12.3-17z" fill="currentColor"/></svg>Полное
-                        соответсвие ТЗ</div>
-                    <div class="advantages__item"><svg class="advantages__icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="far" data-icon="check-circle" role="img" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 48c110.5 0 200 89.5 200 200 0 110.5-89.5 200-200 200-110.5 0-200-89.5-200-200 0-110.5 89.5-200 200-200m140.2 130.3l-22.5-22.7c-4.7-4.7-12.3-4.7-17-0.1L215.3 303.7l-59.8-60.3c-4.7-4.7-12.3-4.7-17-0.1l-22.7 22.5c-4.7 4.7-4.7 12.3-0.1 17l90.8 91.5c4.7 4.7 12.3 4.7 17l172.6-171.2c4.7-4.7 4.7-12.3-17z" fill="currentColor"/></svg>Сайты
-                        выглядят одинаково во всех браузерах</div>
-                    <div class="advantages__item"><svg class="advantages__icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="far" data-icon="check-circle" role="img" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 48c110.5 0 200 89.5 200 200 0 110.5-89.5 200-200 200-110.5 0-200-89.5-200-200 0-110.5 89.5-200 200-200m140.2 130.3l-22.5-22.7c-4.7-4.7-12.3-4.7-17-0.1L215.3 303.7l-59.8-60.3c-4.7-4.7-12.3-4.7-17-0.1l-22.7 22.5c-4.7 4.7-4.7 12.3-0.1 17l90.8 91.5c4.7 4.7 12.3 4.7 17l172.6-171.2c4.7-4.7 4.7-12.3-17z" fill="currentColor"/></svg>До
-                        2х недель бесплатной поддержки по завершению заказа</div>
-                    <div class="advantages__item"><svg class="advantages__icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="far" data-icon="check-circle" role="img" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 48c110.5 0 200 89.5 200 200 0 110.5-89.5 200-200 200-110.5 0-200-89.5-200-200 0-110.5 89.5-200 200-200m140.2 130.3l-22.5-22.7c-4.7-4.7-12.3-4.7-17-0.1L215.3 303.7l-59.8-60.3c-4.7-4.7-12.3-4.7-17-0.1l-22.7 22.5c-4.7 4.7-4.7 12.3-0.1 17l90.8 91.5c4.7 4.7 12.3 4.7 17l172.6-171.2c4.7-4.7 4.7-12.3-17z" fill="currentColor"/></svg>Всегда
-                        поделюсь предложением, если ваш сайт можно сделать еще лучше</div>
-                </div>
-                <div id="advantages__item-fake" class="advantages__item">Uses to detect line height of item class</div>
-            </section>
-            <section class="about container-block text-component">
-                <!-- <a href="#" id="about" class="anchor-fix"></a> -->
-                <h3>Обо мне</h3>
+        <section class="about container-block--lg">
+            <!-- <a href="#" id="about" class="anchor-fix"></a> -->
+            <h3 class="text-header">Обо мне</h3>
+            <div class="container-block--sm">
                 <div class="about__grid">
-                    <div class="about__item-text">
+                    <div class="about__item-text text-component">
                         <p>Привет! Меня всегда тянуло к миру IT, по этому я выбрал специальность прикладная-информатика и выучился на программиста.</p>
-                        <p>В свободное время увлекаюсь программированием для онлайн игр. Сейчас хочу расширить свою проф. сферу деятельности и углубиться в веб-программирование.
+                        <p>В свободное время увлекаюсь программированием для онлайн игр и изучаю веб-программирование, которое стало моей новой сферой проф. деятельности. Я окончил онлайн курс &laquo;Отзывчивый веб-дизайн&raquo; и закрепил фундаментальные знания по вёрстке, а так же создал несколько проектов для портфолио.
                         </p>
-                        <p>Я окончил онлайн курс &laquo;Отзывчивый веб-дизайн&raquo; и закрепил фундаментальные знания, а так же сверстал несколько проектов для портфолио. В данный момент изучаю курс по JavaScript и продолжаю свой рост как специалист.</p>
+                        <p>Сейчас изучаю веб-дизайн и такие Front-end технологии, как: JavaScript, SASS и т.д. и продолжаю свой рост как специалист.</p>
                     </div>
                     <div class="about__item-avatar">
                         <img class="about__avatar" src="assets/img/avatar.png" alt="На аватарке Медведев Денис" title="Медведев Денис">
                     </div>
                 </div>
-            </section>
-        </div>
+            </div>
+            <h4 class="text-header">Технологии которые я использую</h4>
+            <div class="container-block--sm">
+                <div class="about__container">
+                    <div id="masonry-item-fake" class="masonry-item">
+                        <p>Uses to detect line height of item class</p>
+                    </div>
+                    <div class="masonry-grid about__grid-t">
+                        <div class="masonry-item">
+                            <p><svg class="svg-icon svg-icon--left color--contrast-medium" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 438.5 438.5">
+                                    <path d="M409.1 109.2c-19.6-33.6-46.2-60.2-79.8-79.8C295.7 9.8 259.1 0 219.3 0c-39.8 0-76.5 9.8-110.1 29.4 -33.6 19.6-60.2 46.2-79.8 79.8C9.8 142.8 0 179.5 0 219.3c0 39.8 9.8 76.5 29.4 110.1 19.6 33.6 46.2 60.2 79.8 79.8 33.6 19.6 70.3 29.4 110.1 29.4s76.5-9.8 110.1-29.4c33.6-19.6 60.2-46.2 79.8-79.8 19.6-33.6 29.4-70.3 29.4-110.1C438.5 179.5 428.7 142.8 409.1 109.2zM353.7 297.2c-13.9 23.8-32.7 42.6-56.5 56.5 -23.8 13.9-49.8 20.8-77.9 20.8 -28.2 0-54.1-6.9-77.9-20.8 -23.8-13.9-42.6-32.7-56.5-56.5 -13.9-23.8-20.8-49.8-20.8-77.9 0-28.2 6.9-54.2 20.8-77.9 13.9-23.8 32.7-42.6 56.5-56.5 23.8-13.9 49.8-20.8 77.9-20.8 28.2 0 54.2 6.9 77.9 20.8 23.8 13.9 42.6 32.7 56.5 56.5 13.9 23.8 20.8 49.8 20.8 77.9C374.6 247.4 367.6 273.4 353.7 297.2z" />
+                                    <path d="M219.3 146.2c-20.2 0-37.4 7.1-51.7 21.4 -14.3 14.3-21.4 31.5-21.4 51.7 0 20.2 7.1 37.4 21.4 51.7 14.3 14.3 31.5 21.4 51.7 21.4 20.2 0 37.4-7.1 51.7-21.4 14.3-14.3 21.4-31.5 21.4-51.7 0-20.2-7.1-37.4-21.4-51.7C256.7 153.3 239.4 146.2 219.3 146.2z" /></svg>                                HTML5 — Создаю каркас сайта</p>
+                        </div>
+                        <div class="masonry-item">
+                            <p><svg class="svg-icon svg-icon--left color--contrast-medium" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 438.5 438.5">
+                                    <path d="M409.1 109.2c-19.6-33.6-46.2-60.2-79.8-79.8C295.7 9.8 259.1 0 219.3 0c-39.8 0-76.5 9.8-110.1 29.4 -33.6 19.6-60.2 46.2-79.8 79.8C9.8 142.8 0 179.5 0 219.3c0 39.8 9.8 76.5 29.4 110.1 19.6 33.6 46.2 60.2 79.8 79.8 33.6 19.6 70.3 29.4 110.1 29.4s76.5-9.8 110.1-29.4c33.6-19.6 60.2-46.2 79.8-79.8 19.6-33.6 29.4-70.3 29.4-110.1C438.5 179.5 428.7 142.8 409.1 109.2zM353.7 297.2c-13.9 23.8-32.7 42.6-56.5 56.5 -23.8 13.9-49.8 20.8-77.9 20.8 -28.2 0-54.1-6.9-77.9-20.8 -23.8-13.9-42.6-32.7-56.5-56.5 -13.9-23.8-20.8-49.8-20.8-77.9 0-28.2 6.9-54.2 20.8-77.9 13.9-23.8 32.7-42.6 56.5-56.5 23.8-13.9 49.8-20.8 77.9-20.8 28.2 0 54.2 6.9 77.9 20.8 23.8 13.9 42.6 32.7 56.5 56.5 13.9 23.8 20.8 49.8 20.8 77.9C374.6 247.4 367.6 273.4 353.7 297.2z" />
+                                    <path d="M219.3 146.2c-20.2 0-37.4 7.1-51.7 21.4 -14.3 14.3-21.4 31.5-21.4 51.7 0 20.2 7.1 37.4 21.4 51.7 14.3 14.3 31.5 21.4 51.7 21.4 20.2 0 37.4-7.1 51.7-21.4 14.3-14.3 21.4-31.5 21.4-51.7 0-20.2-7.1-37.4-21.4-51.7C256.7 153.3 239.4 146.2 219.3 146.2z" /></svg>                                CSS3 — Применяю, чтобы сделать ваши сайты красивыми</p>
+                        </div>
+                        <div class="masonry-item">
+                            <p><svg class="svg-icon svg-icon--left color--contrast-medium" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 438.5 438.5">
+                                    <path d="M409.1 109.2c-19.6-33.6-46.2-60.2-79.8-79.8C295.7 9.8 259.1 0 219.3 0c-39.8 0-76.5 9.8-110.1 29.4 -33.6 19.6-60.2 46.2-79.8 79.8C9.8 142.8 0 179.5 0 219.3c0 39.8 9.8 76.5 29.4 110.1 19.6 33.6 46.2 60.2 79.8 79.8 33.6 19.6 70.3 29.4 110.1 29.4s76.5-9.8 110.1-29.4c33.6-19.6 60.2-46.2 79.8-79.8 19.6-33.6 29.4-70.3 29.4-110.1C438.5 179.5 428.7 142.8 409.1 109.2zM353.7 297.2c-13.9 23.8-32.7 42.6-56.5 56.5 -23.8 13.9-49.8 20.8-77.9 20.8 -28.2 0-54.1-6.9-77.9-20.8 -23.8-13.9-42.6-32.7-56.5-56.5 -13.9-23.8-20.8-49.8-20.8-77.9 0-28.2 6.9-54.2 20.8-77.9 13.9-23.8 32.7-42.6 56.5-56.5 23.8-13.9 49.8-20.8 77.9-20.8 28.2 0 54.2 6.9 77.9 20.8 23.8 13.9 42.6 32.7 56.5 56.5 13.9 23.8 20.8 49.8 20.8 77.9C374.6 247.4 367.6 273.4 353.7 297.2z" />
+                                    <path d="M219.3 146.2c-20.2 0-37.4 7.1-51.7 21.4 -14.3 14.3-21.4 31.5-21.4 51.7 0 20.2 7.1 37.4 21.4 51.7 14.3 14.3 31.5 21.4 51.7 21.4 20.2 0 37.4-7.1 51.7-21.4 14.3-14.3 21.4-31.5 21.4-51.7 0-20.2-7.1-37.4-21.4-51.7C256.7 153.3 239.4 146.2 219.3 146.2z" /></svg>                                JavaScript — Программирую интерактивность и логику (слайдеры, карусели, счетчики)</p>
+                        </div>
+                        <div class="masonry-item">
+                            <p><svg class="svg-icon svg-icon--left color--contrast-medium" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 438.5 438.5">
+                                    <path d="M409.1 109.2c-19.6-33.6-46.2-60.2-79.8-79.8C295.7 9.8 259.1 0 219.3 0c-39.8 0-76.5 9.8-110.1 29.4 -33.6 19.6-60.2 46.2-79.8 79.8C9.8 142.8 0 179.5 0 219.3c0 39.8 9.8 76.5 29.4 110.1 19.6 33.6 46.2 60.2 79.8 79.8 33.6 19.6 70.3 29.4 110.1 29.4s76.5-9.8 110.1-29.4c33.6-19.6 60.2-46.2 79.8-79.8 19.6-33.6 29.4-70.3 29.4-110.1C438.5 179.5 428.7 142.8 409.1 109.2zM353.7 297.2c-13.9 23.8-32.7 42.6-56.5 56.5 -23.8 13.9-49.8 20.8-77.9 20.8 -28.2 0-54.1-6.9-77.9-20.8 -23.8-13.9-42.6-32.7-56.5-56.5 -13.9-23.8-20.8-49.8-20.8-77.9 0-28.2 6.9-54.2 20.8-77.9 13.9-23.8 32.7-42.6 56.5-56.5 23.8-13.9 49.8-20.8 77.9-20.8 28.2 0 54.2 6.9 77.9 20.8 23.8 13.9 42.6 32.7 56.5 56.5 13.9 23.8 20.8 49.8 20.8 77.9C374.6 247.4 367.6 273.4 353.7 297.2z" />
+                                    <path d="M219.3 146.2c-20.2 0-37.4 7.1-51.7 21.4 -14.3 14.3-21.4 31.5-21.4 51.7 0 20.2 7.1 37.4 21.4 51.7 14.3 14.3 31.5 21.4 51.7 21.4 20.2 0 37.4-7.1 51.7-21.4 14.3-14.3 21.4-31.5 21.4-51.7 0-20.2-7.1-37.4-21.4-51.7C256.7 153.3 239.4 146.2 219.3 146.2z" /></svg>                                Bootstrap — Ускоряю процесс вёрстки с помощью фреймворков</p>
+                        </div>
+                        <div class="masonry-item">
+                            <p><svg class="svg-icon svg-icon--left color--contrast-medium" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 438.5 438.5">
+                                    <path d="M409.1 109.2c-19.6-33.6-46.2-60.2-79.8-79.8C295.7 9.8 259.1 0 219.3 0c-39.8 0-76.5 9.8-110.1 29.4 -33.6 19.6-60.2 46.2-79.8 79.8C9.8 142.8 0 179.5 0 219.3c0 39.8 9.8 76.5 29.4 110.1 19.6 33.6 46.2 60.2 79.8 79.8 33.6 19.6 70.3 29.4 110.1 29.4s76.5-9.8 110.1-29.4c33.6-19.6 60.2-46.2 79.8-79.8 19.6-33.6 29.4-70.3 29.4-110.1C438.5 179.5 428.7 142.8 409.1 109.2zM353.7 297.2c-13.9 23.8-32.7 42.6-56.5 56.5 -23.8 13.9-49.8 20.8-77.9 20.8 -28.2 0-54.1-6.9-77.9-20.8 -23.8-13.9-42.6-32.7-56.5-56.5 -13.9-23.8-20.8-49.8-20.8-77.9 0-28.2 6.9-54.2 20.8-77.9 13.9-23.8 32.7-42.6 56.5-56.5 23.8-13.9 49.8-20.8 77.9-20.8 28.2 0 54.2 6.9 77.9 20.8 23.8 13.9 42.6 32.7 56.5 56.5 13.9 23.8 20.8 49.8 20.8 77.9C374.6 247.4 367.6 273.4 353.7 297.2z" />
+                                    <path d="M219.3 146.2c-20.2 0-37.4 7.1-51.7 21.4 -14.3 14.3-21.4 31.5-21.4 51.7 0 20.2 7.1 37.4 21.4 51.7 14.3 14.3 31.5 21.4 51.7 21.4 20.2 0 37.4-7.1 51.7-21.4 14.3-14.3 21.4-31.5 21.4-51.7 0-20.2-7.1-37.4-21.4-51.7C256.7 153.3 239.4 146.2 219.3 146.2z" /></svg>                                БЭМ — Придерживаюсь методологии вёрстки, чтобы сделать код читабельнее</p>
+                        </div>
+                        <div class="masonry-item">
+                            <p><svg class="svg-icon svg-icon--left color--contrast-medium" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 438.5 438.5">
+                                    <path d="M409.1 109.2c-19.6-33.6-46.2-60.2-79.8-79.8C295.7 9.8 259.1 0 219.3 0c-39.8 0-76.5 9.8-110.1 29.4 -33.6 19.6-60.2 46.2-79.8 79.8C9.8 142.8 0 179.5 0 219.3c0 39.8 9.8 76.5 29.4 110.1 19.6 33.6 46.2 60.2 79.8 79.8 33.6 19.6 70.3 29.4 110.1 29.4s76.5-9.8 110.1-29.4c33.6-19.6 60.2-46.2 79.8-79.8 19.6-33.6 29.4-70.3 29.4-110.1C438.5 179.5 428.7 142.8 409.1 109.2zM353.7 297.2c-13.9 23.8-32.7 42.6-56.5 56.5 -23.8 13.9-49.8 20.8-77.9 20.8 -28.2 0-54.1-6.9-77.9-20.8 -23.8-13.9-42.6-32.7-56.5-56.5 -13.9-23.8-20.8-49.8-20.8-77.9 0-28.2 6.9-54.2 20.8-77.9 13.9-23.8 32.7-42.6 56.5-56.5 23.8-13.9 49.8-20.8 77.9-20.8 28.2 0 54.2 6.9 77.9 20.8 23.8 13.9 42.6 32.7 56.5 56.5 13.9 23.8 20.8 49.8 20.8 77.9C374.6 247.4 367.6 273.4 353.7 297.2z" />
+                                    <path d="M219.3 146.2c-20.2 0-37.4 7.1-51.7 21.4 -14.3 14.3-21.4 31.5-21.4 51.7 0 20.2 7.1 37.4 21.4 51.7 14.3 14.3 31.5 21.4 51.7 21.4 20.2 0 37.4-7.1 51.7-21.4 14.3-14.3 21.4-31.5 21.4-51.7 0-20.2-7.1-37.4-21.4-51.7C256.7 153.3 239.4 146.2 219.3 146.2z" /></svg>                                Git — Сохраняю проект, а если что-то пойдет не так я всегда смогу откатить измнения</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- text-component -->
+        <section class="portfolio container-block--lg">
+            <h3 class="text-header">Портфолио</h3>
+            <div class="container-block--sm">
+                <div class="portfolio__container">
+                    <a href="#" class="portfolio__link">
+                        <div class="portfolio__grid text-component transition">
+                            <img src="assets/img/pic-1-1.jpg" alt="Icon made by Freepik from www.flaticon.com" class="porfolio__img">
+                            <h4>Название проекта</h4>
+                            <p class="portfolio__p">Описание проекта</p>
+                            <!--      <div class="portfolio__overlay transition">
+                                    <p class="p--overlay-mix portfolio__overlay-p"><strong>открыть проект</strong></p> -->
+                        </div>
+                    </a>
+                    <a href="#" class="portfolio__link">
+                        <div class="portfolio__grid text-component transition">
+                            <img src="assets/img/pic-16-19.jpg" alt="Icon made by Freepik from www.flaticon.com" class="porfolio__img">
+                            <h4>Название проекта</h4>
+                            <p class="portfolio__p">Описание проекта</p>
+                            <!--      <div class="portfolio__overlay transition">
+                                    <p class="p--overlay-mix portfolio__overlay-p"><strong>открыть проект</strong></p> -->
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
 
-        <!-- <form>
+
+    </main>
+
+    <!-- <form>
             <fieldset class="margin-bottom--md">
                 <legend class="form-legend">Form Legend</legend>
 
@@ -112,8 +192,8 @@
                 <button class="btn btn--primary">Submit</button>
             </div>
         </form> -->
-        <script type="text/javascript" src="assets/js/util.js"></script>
-        <script type="text/javascript" src="assets/js/main.js"></script>
-    </body>
+    <script type="text/javascript" src="assets/js/util.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+</body>
 
 </html>

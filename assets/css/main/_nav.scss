@@ -5,6 +5,7 @@
     width: 100%;
     box-shadow: 0 1px 2px hsla(0, 0%, 0%, 0.3);
     background: var(--color-bg);
+    z-index: 2;
 }
 
 .nav__container {
@@ -86,8 +87,6 @@
 }
 
 .transition {
-    -webkit-transition: all .3s ease-out;
-    -o-transition: all .3s ease-out;
     transition: all .3s ease-out;
 }
 

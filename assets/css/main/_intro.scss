@@ -3,7 +3,7 @@
     position: relative;
     height: 100vh;
     width: 100%;
-    min-height: 600px; // ~600px
+    min-height: 700px;
     background-image: url(../img/background.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -56,11 +56,11 @@
 }
 
 .intro__invert-text {
-    @extend .text--color-white;
+    @extend .color--white;
     @extend %intro__invert;
 }
 
 .intro__invert-text-accent-lighter {
-    @extend .text--color-accent-lighter;
+    @extend .color--accent-lighter;
     @extend %intro__invert;
 }

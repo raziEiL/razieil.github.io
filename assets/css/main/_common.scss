@@ -1,0 +1,50 @@
+/* Common class */
+
+.container-block, .container-block--md {
+    padding: var(--space-md) 0;
+    @extend .reset-margin;
+}
+
+.container-block--lg {
+    padding: var(--space-lg) 0;
+    @extend .reset-margin;
+}
+
+.container-block--sm {
+    padding: var(--space-sm) 0;
+    @extend .reset-margin;
+}
+
+.container-block--xs {
+    padding: var(--space-xs) 0;
+    @extend .reset-margin;
+}
+
+.container-block--border {
+    border-bottom: var(--space-xxxs) solid var(--color-primary);
+}
+
+.reset-margin {
+    &>*:first-child {
+        margin-top: 0;
+    }
+    &>*:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.svg-icon {
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+}
+
+.svg-icon--left {
+    float: left;
+    margin: 0.125em var(--space-xs) 0 0;
+}
+
+.svg-icon--right {
+    float: right;
+    margin: 0.125em 0 0 var(--space-xs);
+}
