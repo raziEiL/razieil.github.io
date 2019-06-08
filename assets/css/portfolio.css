@@ -1,5 +1,6 @@
 /* бордеры для всех контейнеров кроме полседнего */
-.container-block--lg:not(:last-child){
+
+.container-block--lg:not(:last-child) {
     border-bottom: var(--space-xxxs) solid var(--color-primary);
 }
 
@@ -34,18 +35,17 @@ a.anchor-fix {
 }
 
 @media screen and (max-width: 600px) {
-    .advantages__grid {
-       
-    }
+    .advantages__grid {}
 }
 
-.advantages__item{
- /*    width: 340px;
+.advantages__item {
+    /*    width: 340px;
     margin-right: auto;
     */
     background: var(--color-contrast-lower);
     padding: var(--space-xs);
-} 
+}
+
 
 /* about */
 
@@ -88,7 +88,6 @@ a.anchor-fix {
         grid-template-columns: 1fr;
     }
 }
-
 
 .section-header {
     text-align: center;
