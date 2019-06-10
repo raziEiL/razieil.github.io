@@ -1,0 +1,15 @@
+.advantages__item {
+    padding: var(--space-xxs);
+    border-radius: var(--radius);
+    border: 1px solid var(--color-contrast-low);
+    /*     &:nth-child(odd) {
+        background: var(--color-primary);
+        h4, p {
+            color: var(--color-white);
+            @include fontSmooth;
+        }
+        .svg-icon {
+            color: var(--color-accent-lighter);
+        }
+    } */
+}

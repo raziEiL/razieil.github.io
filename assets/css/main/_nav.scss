@@ -1,11 +1,11 @@
-// Навигация
+// Навигация TODO: вкл. тень только при фиксации навигации
 .nav {
     position: sticky;
     top: 0;
     width: 100%;
-    box-shadow: 0 1px 2px hsla(0, 0%, 0%, 0.3);
     background: var(--color-bg);
     z-index: 2;
+    @include BoxShadow(3);
 }
 
 .nav__container {
@@ -117,11 +117,11 @@
         top: 100%;
         right: 0;
         background: var(--color-bg);
-        box-shadow: 0 3px 8px hsla(0, 0%, 0%, 0.3);
         opacity: 0;
         flex-direction: column;
         width: 156px;
         padding: 10px;
+        @include BoxShadow(6);
     }
     .nav__item {
         margin: 0 0 15px 0;
