@@ -185,34 +185,54 @@
                 </div>
             </div>
         </section>
-
-
-    </main>
-
-    <!-- <form>
-            <fieldset class="margin-bottom--md">
-                <legend class="form-legend">Form Legend</legend>
-
-                <div class="margin-bottom--sm">
-                    <label class="form-label" for="inputName">Name:</label>
-                    <input class="form-control" type="text" name="inputName" id="inputName" required>
+        <section class="random container-block--lg">
+            <h3 class="text-header">Случайные факты</h3>
+            <div class="container-block--sm">
+                <div class="random__grid">
+                    <div class="random__item random__item-img">
+                        <img class="random__img" src="assets/img/random.png" alt="Кот с игральными костями" title="Великий рандом">
+                    </div>
+                    <div class="random__item">
+                        <ul class="common-ul">
+                            <li class="common-li">Не верю в приметы, верю в себя</li>
+                            <li class="common-li">Ой как не люблю томатный сок!</li>
+                            <li class="common-li">Занимаюсь спортом</li>
+                            <li class="common-li">Помешан на оптимизации</li>
+                            <li class="common-li">Иногда сочиняю музыку</li>
+                            <li class="common-li">Люблю создавать моды для игр</li>
+                            <li class="common-li">Гладил кота и получил разряд статическим электричеством</li>
+                        </ul>
+                    </div>
                 </div>
-
-                <div class="margin-bottom--sm">
-                    <label class="form-label" for="inputEmail">Email:</label>
-                    <input class="form-control" type="email" name="inputEmail" id="inputEmail" placeholder="email@myemail.com">
-                </div>
-
-                <div>
-                    <label class="form-label" for="textarea">Textarea:</label>
-                    <textarea class="form-control" name="textarea" id="textarea"></textarea>
-                </div>
-            </fieldset>
-
-            <div>
-                <button class="btn btn--primary">Submit</button>
             </div>
-        </form> -->
+        </section>
+        <section class="contacts container-block--lg">
+            <h3 class="text-header">Контакты</h3>
+            <div class="container-block--sm">
+                <form action="https://formspree.io/mr.raz4291@gmail.com" method="POST">
+                    <fieldset class="margin-bottom--md">
+                        <legend class="form-legend">Заполните форму, чтобы заказать вёрстку.</legend>
+                        <div class="margin-bottom--sm">
+                            <label class="form-label" for="Name">Имя:</label>
+                            <input class="form-control" type="text" name="Name" id="Name" required>
+                        </div>
+                        <div class="margin-bottom--sm">
+                            <label class="form-label" for="Email">Email:</label>
+                            <input class="form-control" type="email" name="Email" id="Email" placeholder="почтовый@ящик.ru">
+                        </div>
+                        <div>
+                            <label class="form-label" for="Text">Сообщение:</label>
+                            <textarea class="form-control" name="Text" id="Text"></textarea>
+                        </div>
+                    </fieldset>
+                    <div>
+                        <button class="btn btn--primary">Отправить</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer class="footer container container--md text--sm container-block--md"><p>Copyright © Медведев Денис («raziEiL»)</p><p>2019</p></footer>
     <script type="text/javascript" src="assets/js/util.js"></script>
     <script type="text/javascript" src="assets/js/main.js"></script>
 </body>

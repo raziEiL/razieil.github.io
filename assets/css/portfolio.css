@@ -142,3 +142,68 @@ a.anchor-fix {
         grid-template-columns: 1fr;
     }
 }
+
+
+/* random */
+
+.random__grid {
+    width: 100%;
+    display: flex;
+}
+
+.random__item {
+    width: 50%;
+}
+
+.random__item-img {
+    padding-right: var(--space-xs);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.random__img {
+    display: block;
+    max-height: 260px;
+    max-width: 100%;
+}
+
+@media screen and (max-width: 900px) {
+    .random__img {
+        max-height: 220px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .random__item-img {
+        display: none;
+    }
+    .random__item {
+        width: 100%;
+    }
+}
+
+.common-ul {}
+
+.common-li {
+    margin-bottom: var(--space-sm);
+    color: var(--color-contrast-high);
+}
+
+.common-li::before {
+    content: "";
+    background-image: url("data:image/svg+xml;utf8,<svg fill='hsl(240, 1%, 48%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 438.5 438.5'><path d='M409.1 109.2c-19.6-33.6-46.2-60.2-79.8-79.8C295.7 9.8 259.1 0 219.3 0c-39.8 0-76.5 9.8-110.1 29.4 -33.6 19.6-60.2 46.2-79.8 79.8C9.8 142.8 0 179.5 0 219.3c0 39.8 9.8 76.5 29.4 110.1 19.6 33.6 46.2 60.2 79.8 79.8 33.6 19.6 70.3 29.4 110.1 29.4s76.5-9.8 110.1-29.4c33.6-19.6 60.2-46.2 79.8-79.8 19.6-33.6 29.4-70.3 29.4-110.1C438.5 179.5 428.7 142.8 409.1 109.2zM353.7 297.2c-13.9 23.8-32.7 42.6-56.5 56.5 -23.8 13.9-49.8 20.8-77.9 20.8 -28.2 0-54.1-6.9-77.9-20.8 -23.8-13.9-42.6-32.7-56.5-56.5 -13.9-23.8-20.8-49.8-20.8-77.9 0-28.2 6.9-54.2 20.8-77.9 13.9-23.8 32.7-42.6 56.5-56.5 23.8-13.9 49.8-20.8 77.9-20.8 28.2 0 54.2 6.9 77.9 20.8 23.8 13.9 42.6 32.7 56.5 56.5 13.9 23.8 20.8 49.8 20.8 77.9C374.6 247.4 367.6 273.4 353.7 297.2z' /><path d='M219.3 146.2c-20.2 0-37.4 7.1-51.7 21.4 -14.3 14.3-21.4 31.5-21.4 51.7 0 20.2 7.1 37.4 21.4 51.7 14.3 14.3 31.5 21.4 51.7 21.4 20.2 0 37.4-7.1 51.7-21.4 14.3-14.3 21.4-31.5 21.4-51.7 0-20.2-7.1-37.4-21.4-51.7C256.7 153.3 239.4 146.2 219.3 146.2z' /></svg>");
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 1em;
+    height: 1em;
+    float: left;
+    margin: 0.125em var(--space-xs) 0 0;
+}
+
+.footer {
+    text-align: center;
+    color: var(--color-contrast-medium);
+    border-top: 1px solid var(--color-contrast-low);
+}

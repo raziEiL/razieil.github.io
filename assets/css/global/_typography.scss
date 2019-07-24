@@ -136,7 +136,7 @@ i {
         line-height: var(--component-body-line-height);
         color: var(--color-contrast-high);
     }
-    ul, ol, p, blockquote, .text-component__block, .text-component__img {
+    ul, ol, p, li, blockquote, .text-component__block, .text-component__img {
         margin-bottom: calc(var(--space-sm) * var(--text-vspace-multiplier));
     }
     ul, ol {

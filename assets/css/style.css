@@ -1413,7 +1413,7 @@ i {
     color: var(--color-contrast-high);
 }
 
-.text-component ul, .text-component ol, .text-component p, .text-component blockquote, .text-component .text-component__block, .text-component .text-component__img {
+.text-component ul, .text-component ol, .text-component p, .text-component li, .text-component blockquote, .text-component .text-component__block, .text-component .text-component__img {
     margin-bottom: 0.75em;
     margin-bottom: calc(var(--space-sm)*var(--text-vspace-multiplier));
 }
@@ -1857,8 +1857,6 @@ i {
 
 .form-label {
     display: inline-block;
-    font-size: 0.83333em;
-    font-size: var(--text-sm);
     margin-bottom: 0.25em;
     margin-bottom: var(--space-xxxs);
 }
@@ -1868,8 +1866,6 @@ i {
     background-color: var(--color-error);
     color: hsl(0, 0%, 100%);
     color: var(--color-white);
-    font-size: 0.83333em;
-    font-size: var(--text-sm);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     padding: 0.5em;

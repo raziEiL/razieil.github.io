@@ -1,9 +1,8 @@
-$breakpoints: ( 
-    xs: 30rem, // ~480px
-    sm: 37.5rem, // ~600pxS
-    md: 64rem, // ~1024px
-    lg: 80rem, // ~1280px
-    xl: 90rem // ~1440px
+$breakpoints: ( xs: 30rem, // ~480px
+sm: 37.5rem, // ~600pxS
+md: 64rem, // ~1024px
+lg: 80rem, // ~1280px
+xl: 90rem // ~1440px
 );
 // if space more than...
 @mixin breakpoint($breakpoint, $logic: false) {

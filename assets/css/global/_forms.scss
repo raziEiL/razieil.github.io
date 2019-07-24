@@ -47,7 +47,7 @@
 .form-label {
     // label style
     display: inline-block;
-    font-size: var(--text-sm);
+    // font-size: var(--text-sm);
     margin-bottom: var(--space-xxxs);
 }
 
@@ -55,7 +55,7 @@
 .form__msg-error {
     background-color: var(--color-error);
     color: var(--color-white);
-    font-size: var(--text-sm);
+    // font-size: var(--text-sm);
     @include fontSmooth;
     padding: var(--space-xs);
     margin-top: var(--space-sm);
