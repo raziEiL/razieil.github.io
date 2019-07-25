@@ -2122,22 +2122,30 @@ Descr: A section containing a list of features
     margin-bottom: 0;
 }
 
-.svg-icon {
-    width: 1em;
-    height: 1em;
-    fill: currentColor;
+.reset-padding>*:last-child {
+    padding-bottom: 0;
 }
 
-.svg-icon--left {
+.svg-icon-1::before, .svg-icon-2::before {
+    content: "";
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 1em;
+    height: 1em;
     float: left;
     margin: 0.125em 0.5em 0 0;
     margin: 0.125em var(--space-xs) 0 0;
 }
 
-.svg-icon--right {
-    float: right;
-    margin: 0.125em 0 0 0.5em;
-    margin: 0.125em 0 0 var(--space-xs);
+.svg-icon-1::before {
+    /* --color-accent */
+    background-image: url("data:image/svg+xml;utf8,<svg fill='hsl(171, 67%, 24%)' xmlns='http://www.w3.org/2000/svg' aria-hidden='true' focusable='false' data-prefix='far' data-icon='check-circle' role='img' viewBox='0 0 512 512'> <path d='M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 48c110.5 0 200 89.5 200 200 0 110.5-89.5 200-200 200-110.5 0-200-89.5-200-200 0-110.5 89.5-200 200-200m140.2 130.3l-22.5-22.7c-4.7-4.7-12.3-4.7-17-0.1L215.3 303.7l-59.8-60.3c-4.7-4.7-12.3-4.7-17-0.1l-22.7 22.5c-4.7 4.7-4.7 12.3-0.1 17l90.8 91.5c4.7 4.7 12.3 4.7 17l172.6-171.2c4.7-4.7 4.7-12.3-17z' /></svg>");
+}
+
+.svg-icon-2::before {
+    /* --color-contrast-medium */
+    background-image: url("data:image/svg+xml;utf8,<svg fill='hsl(240, 1%, 48%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 438.5 438.5'><path d='M409.1 109.2c-19.6-33.6-46.2-60.2-79.8-79.8C295.7 9.8 259.1 0 219.3 0c-39.8 0-76.5 9.8-110.1 29.4 -33.6 19.6-60.2 46.2-79.8 79.8C9.8 142.8 0 179.5 0 219.3c0 39.8 9.8 76.5 29.4 110.1 19.6 33.6 46.2 60.2 79.8 79.8 33.6 19.6 70.3 29.4 110.1 29.4s76.5-9.8 110.1-29.4c33.6-19.6 60.2-46.2 79.8-79.8 19.6-33.6 29.4-70.3 29.4-110.1C438.5 179.5 428.7 142.8 409.1 109.2zM353.7 297.2c-13.9 23.8-32.7 42.6-56.5 56.5 -23.8 13.9-49.8 20.8-77.9 20.8 -28.2 0-54.1-6.9-77.9-20.8 -23.8-13.9-42.6-32.7-56.5-56.5 -13.9-23.8-20.8-49.8-20.8-77.9 0-28.2 6.9-54.2 20.8-77.9 13.9-23.8 32.7-42.6 56.5-56.5 23.8-13.9 49.8-20.8 77.9-20.8 28.2 0 54.2 6.9 77.9 20.8 23.8 13.9 42.6 32.7 56.5 56.5 13.9 23.8 20.8 49.8 20.8 77.9C374.6 247.4 367.6 273.4 353.7 297.2z' /><path d='M219.3 146.2c-20.2 0-37.4 7.1-51.7 21.4 -14.3 14.3-21.4 31.5-21.4 51.7 0 20.2 7.1 37.4 21.4 51.7 14.3 14.3 31.5 21.4 51.7 21.4 20.2 0 37.4-7.1 51.7-21.4 14.3-14.3 21.4-31.5 21.4-51.7 0-20.2-7.1-37.4-21.4-51.7C256.7 153.3 239.4 146.2 219.3 146.2z' /></svg>");
 }
 
 .intro {
