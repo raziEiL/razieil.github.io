@@ -1,3 +1,23 @@
+// nav shadow
+// https://usefulangle.com/post/108/javascript-detecting-element-gets-fixed-in-css-position-sticky
+var observer = new IntersectionObserver(function(entries) {
+    // no intersection with screen
+    if (entries[0].intersectionRatio === 0) {
+        console.log("sticky");
+        document.querySelector(".nav").classList.add("nav--shadow");
+    }
+    // fully intersects with screen
+    else if (entries[0].intersectionRatio === 1) {
+        console.log("unsticky");
+        document.querySelector(".nav").classList.remove("nav--shadow");
+    }
+}, {
+    threshold: [0, 1]
+});
+
+observer.observe(document.querySelector(".nav-observer"));
+
+// nav hamburger
 const MENU = document.getElementsByClassName("nav__menu")[0];
 const NAV_LIST = document.getElementsByClassName("nav__list")[0];
 const MENU_ACTIVE = "nav__menu-active";

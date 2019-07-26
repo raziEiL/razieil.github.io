@@ -2203,6 +2203,35 @@ Descr: A section containing a list of features
     justify-content: center;
 }
 
+.intro__img {
+    -webkit-animation: pulsate-fwd 2s ease-in-out 2s infinite both;
+    animation: pulsate-fwd 2s ease-in-out 2s infinite both;
+}
+
+@-webkit-keyframes pulsate-fwd {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes pulsate-fwd {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 .text--shadow-md, .intro__invert-text, .intro__invert-text-accent-lighter {
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
@@ -2210,6 +2239,11 @@ Descr: A section containing a list of features
 .intro__invert-text, .intro__invert-text-accent-lighter {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+.nav-observer {
+    height: 1px;
+    visibility: hidden;
 }
 
 .nav {
@@ -2220,6 +2254,10 @@ Descr: A section containing a list of features
     background: hsl(0, 0%, 100%);
     background: var(--color-bg);
     z-index: 2;
+    transition: box-shadow 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.nav--shadow {
     box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.12), 0 1px 8px 0 rgba(0, 0, 0, 0.2);
 }
 

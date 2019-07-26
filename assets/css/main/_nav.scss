@@ -1,10 +1,18 @@
-// Навигация TODO: вкл. тень только при фиксации навигации
+.nav-observer {
+    height: 1px;
+    visibility: hidden;
+}
+
 .nav {
     position: sticky;
     top: 0;
     width: 100%;
     background: var(--color-bg);
     z-index: 2;
+    transition: box-shadow 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.nav--shadow {
     @include BoxShadow(3);
 }
 
