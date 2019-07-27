@@ -1,4 +1,9 @@
-/* бордеры для всех контейнеров кроме полседнего */
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* бордеры для всех контейнеров кроме последнего */
 
 .container-block--lg:not(:last-child) {
     border-bottom: var(--space-xxxxs) solid var(--color-primary-light);
@@ -8,6 +13,10 @@
     margin-bottom: var(--space-xxxs);
     text-align: center;
     text-transform: uppercase;
+}
+
+.text-header-2 {
+    margin-bottom: var(--space-xxxs);
 }
 
 #masonry-item-fake {
@@ -32,7 +41,7 @@
 /* advantages */
 
 
-/* TODO: выровнить элементы по оси X */
+/* TODO: выровнять элементы по оси X */
 
 .advantages__grid {
     display: grid;
@@ -206,7 +215,7 @@
     grid-template-columns: min-content;
 }
 
-.contacts__social {
+.contacts__item-social {
     display: flex;
     align-items: center;
 }
@@ -221,8 +230,32 @@
 }
 
 @media screen and (max-width: 681px) {
+    .text-header-2 {
+        text-align: center;
+    }
+    .contacts__item-2 {
+        order: -1;
+    }
     .contacts__container-social {
-        grid-template-columns: min-content auto;
+        grid-template-columns: repeat(auto-fit, 230px);
+        justify-content: space-between;
+    }
+    .contacts__container {
+        grid-template-columns: 1fr;
+    }
+    .contacts__btn {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .contacts__text-social {
+        display: none;
+    }
+    .contacts__container-social {
+        grid-template-columns: repeat(3, min-content);
+        justify-content: space-around;
     }
 }
 
