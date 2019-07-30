@@ -1,3 +1,63 @@
-.portfolio__grid:hover {
-    @include BoxShadow(5);
+.portfolio__container {
+    display: grid;
+    grid-gap: 0;
+    grid-template-columns: repeat(auto-fill, minmax(430px, 1fr));
+}
+
+.portfolio__grid {
+    position: relative;
+    padding: var(--space-md);
+    max-width: 600px;
+    margin: 0 auto;
+    &:hover {
+        @include BoxShadow(5);
+    }
+}
+
+.portfolio__img {
+    display: block;
+    max-height: 400px;
+    max-width: 100%;
+    margin-bottom: var(--space-xs);
+}
+
+.portfolio__link {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.portfolio__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: var(--color-primary);
+    outline: 2px solid var(--color-bg);
+    outline-offset: -24px;
+    opacity: 0;
+}
+
+.portfolio__overlay:hover {
+    opacity: 0.7;
+}
+
+.portfolio__overlay-p {
+    position: inherit;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+.p--overlay-mix {
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    word-spacing: 0.4rem;
+}
+
+@media screen and (max-width: 430px) {
+    .portfolio__container {
+        grid-template-columns: 1fr;
+    }
 }

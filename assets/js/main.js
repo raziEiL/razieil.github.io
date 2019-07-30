@@ -18,25 +18,12 @@ var observer = new IntersectionObserver(function(entries) {
 observer.observe(document.querySelector(".nav-observer"));
 
 // nav hamburger
-const MENU = document.getElementsByClassName("nav__menu")[0];
 const NAV_LIST = document.getElementsByClassName("nav__list")[0];
-const MENU_ACTIVE = "nav__menu-active";
-const NAV_ACTIVE = "nav__list-active";
-// Toggle class to elem
-MENU.addEventListener("click", function() {
-    ToggleClass(this, MENU_ACTIVE);
-    ToggleClass(NAV_LIST, NAV_ACTIVE);
+document.querySelector(".nav__menu").addEventListener("click", function() {
+    this.classList.toggle("nav__menu-active");
+    NAV_LIST.classList.toggle("nav__list-active");
 });
 
-function ToggleClass(elem, toggle) {
-    console.log(MENU);
-    if (elem.className.search(toggle) != -1) {
-        elem.className = elem.className.split(toggle).join('').trim();
-    }
-    else {
-        elem.className += " " + toggle;
-    }
-}
 // Использование "Кирпичной кладки": добавить класс masonry-grid к контейнеру, а класс masonry-item к дочерним элементам
 // https://codepen.io/razieil/pen/arPVmX
 var hiddenDiv = document.getElementById("masonry-item-fake");
@@ -71,4 +58,18 @@ function alignGridRows() {
 
     for (let i = 0; i < GRID_ARRAY.length; i++)
         GRID_ARRAY[i].style.alignItems = null;
+}
+
+// portfolio
+const PORTFOLIO_GRID_ARRAY = document.getElementsByClassName("portfolio__grid");
+const PORTFOLIO_P_ARRAY = document.getElementsByClassName("portfolio__p");
+for (let i = 0; i < PORTFOLIO_GRID_ARRAY.length; i++) {
+    PORTFOLIO_GRID_ARRAY[i].addEventListener("mouseenter", function() {
+        console.log("enter num ", i, event.target, "from ", event.relatedTarget);
+        PORTFOLIO_P_ARRAY[i].classList.remove("truncate-lines");
+    });
+    PORTFOLIO_GRID_ARRAY[i].addEventListener("mouseleave", function() {
+        console.log("leave num ", i, event.target, "from ", event.relatedTarget);
+        PORTFOLIO_P_ARRAY[i].classList.add("truncate-lines");
+    });
 }
