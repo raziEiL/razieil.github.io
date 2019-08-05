@@ -63,7 +63,7 @@
 				<div class="row">
 					<div id="intro-message">
 						<h1>Киберспорт - это круто!</h1>
-						<h3>Новый сезон 2017 в отличной форме</h3>
+						<h3>Новый сезон <span id="js-year">2017</span> в отличной форме</h3>
 						<hr class="intro-divider">
 						<ul class="list-inline intro-social-buttons">
 							<li>
@@ -291,12 +291,13 @@
 				</div>
 				<hr class="my-divider">
 				<div class="row text-center">
-					<small>&#171;Академия киберспорта&#187; является вымышленной организацией, а данный веб-сайт лишь  демонстрирует навыки вёрстки разработчика.</small><br>
+					<small>&#171;Академия киберспорта&#187; является вымышленной организацией, а данный веб-сайт лишь  демонстрирует навык вёрстки разработчика.</small><br>
 					<small>Курсовой проект по МДК 03.01 &#171;Академия киберспорта&#187;</small><br>
 					<small>&copy; 2017-2019 Разработка: <a href="https://razieil.github.io/" target="_blank">Медведев Д.С. («raziEiL»)</a></small><br>
 				</div>
 			</div>
 		</section>	
+		<script>document.getElementById("js-year").innerText = new Date().getFullYear();</script>
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="js/jquery.min.js"></script>
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
