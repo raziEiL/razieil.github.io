@@ -1,5 +1,6 @@
 # razieil.github.io
 Репозиторий верстальщика / Road to a Front-End
+## Структура
 ```
 root  
 │  // Сайт-портфолио  
@@ -10,3 +11,7 @@ root
 │ // Практика
 ├── practice/ 
 ```
+
+## Смежные репозитории
+[freeCodeCamp](https://github.com/raziEiL/freeCodeCamp) - Responsive Web Design Projects
+
