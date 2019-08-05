@@ -26,6 +26,22 @@
     text-decoration: inherit;
 }
 
+.portfolio__badge {
+    position: absolute;
+    top: var(--space-md);
+    right: var(--space-md);
+    padding: var(--space-xxxxs) var(--space-xxxs);
+    color: var(--color-white);
+}
+
+.portfolio__badge--practice {
+    background-color: var(--color-primary);
+}
+
+.portfolio__badge--job {
+    background-color: var(--color-accent);
+}
+
 .portfolio__overlay {
     position: absolute;
     width: 100%;
