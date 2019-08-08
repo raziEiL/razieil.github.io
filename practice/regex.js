@@ -110,3 +110,8 @@ console.log(str.match(/wo{2,3}w/gi));
 console.log(str.match(/wo{1,}w/gi));
 // ["Wooow"]
 console.log(str.match(/wo{3}w/gi));
+
+// Remove Whitespace
+str = "   Hello, World!  ";
+console.log(str.replace(/^\s+|\s+$/g, ""));
+console.log(str.trim());
