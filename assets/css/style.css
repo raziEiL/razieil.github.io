@@ -2269,6 +2269,23 @@ i {
       align-items: center;
 }
 
+.nav__svg {
+  height: 1.728em;
+  height: var(--text-xl);
+  fill: hsl(203, 59%, 30%);
+  fill: var(--color-primary);
+}
+
+.nav__svg:hover {
+  fill: hsl(171, 67%, 34%);
+  fill: var(--color-accent-light);
+}
+
+.nav__svg:visited {
+  fill: hsl(203, 59%, 30%);
+  fill: var(--color-primary);
+}
+
 .nav__list {
   display: -ms-flexbox;
   display: flex;

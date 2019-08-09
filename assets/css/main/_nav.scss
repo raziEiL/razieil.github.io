@@ -22,6 +22,19 @@
     align-items: center;
 }
 
+.nav__svg {
+    height: var(--text-xl);
+    fill: var(--color-primary);
+
+    &:hover {
+        fill: var(--color-accent-light);
+    }
+
+    &:visited {
+        fill: var(--color-primary);
+    }
+}
+
 .nav__list {
     display: flex;
     list-style: none;
@@ -51,9 +64,11 @@
     padding-bottom: calc(var(--space-sm) - 3px);
     border-bottom: 3px solid rgba(0, 0, 0, 0);
     transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+
     &:hover {
         border-bottom-color: var(--color-accent);
     }
+
     &:visited {
         color: var(--color-primary);
     }
@@ -71,14 +86,17 @@
 
 .nav__span {
     @extend %nav__span;
+
     &::before, &::after {
         @extend %nav__span;
         content: '';
         display: initial;
     }
+
     &::before {
         transform: translateY(-5px);
     }
+
     &::after {
         transform: translateY(5px);
     }
@@ -86,21 +104,22 @@
 
 .nav__menu-active .nav__span {
     background: transparent;
+
     &::before {
         transform: rotate(45deg);
     }
+
     &::after {
         transform: rotate(-45deg);
     }
 }
 
-
 /* гамбургер для навигации */
-
 @media screen and (max-width: 64rem) {
     .nav__container {
         padding: var(--space-sm) 0;
     }
+
     .nav__menu {
         display: flex;
         position: relative;
@@ -111,9 +130,11 @@
         padding: 8px;
         cursor: pointer;
     }
+
     .nav__span {
         display: initial;
     }
+
     .nav__list {
         display: none;
         position: absolute;
@@ -127,12 +148,15 @@
         padding: 10px;
         @include BoxShadow(6);
     }
+
     .nav__item {
         margin: 0 0 15px 0;
     }
+
     .nav__list>.nav__item:last-child {
         margin-bottom: 0;
     }
+
     .nav__link {
         display: initial;
         padding-top: 0;
