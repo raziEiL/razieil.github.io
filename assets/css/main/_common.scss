@@ -1,5 +1,4 @@
 /* Common class */
-
 .container-block, .container-block--md {
     padding: var(--space-md) 0;
     @extend .reset-margin;
@@ -28,6 +27,7 @@
     &>*:first-child {
         margin-top: 0;
     }
+
     &>*:last-child {
         margin-bottom: 0;
     }
@@ -39,9 +39,7 @@
     }
 }
 
-
 /* бордеры для всех контейнеров кроме последнего */
-
 .container-block--lg:not(:last-child) {
     border-bottom: var(--space-xxxxs) solid var(--color-primary-light);
 }
@@ -64,9 +62,7 @@
     white-space: nowrap;
 }
 
-
 /* TODO: высчитывать высоту навигации через js */
-
 .anchor-fix {
     display: block;
     position: relative;

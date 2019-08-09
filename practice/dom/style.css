@@ -51,7 +51,8 @@ header {
 .container-form__item {
     margin-right: 16px;
 }
-.container-form__item:last-child{
+
+.container-form__item:last-child {
     margin-right: 0;
 }
 

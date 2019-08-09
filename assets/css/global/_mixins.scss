@@ -20,15 +20,19 @@
     width: 0;
     height: 0;
     border: $width solid transparent;
-    @if( $direction==left) {
+
+    @if($direction==left) {
         border-right-color: $color;
     }
-    @else if( $direction==right) {
+
+    @else if($direction==right) {
         border-left-color: $color;
     }
-    @else if( $direction==down) {
+
+    @else if($direction==down) {
         border-top-color: $color;
     }
+
     @else {
         border-bottom-color: $color;
     }
@@ -80,9 +84,11 @@
 // credits: https://css-tricks.com/snippets/sass/str-replace-function/
 @function str-replace($string, $search, $replace: '') {
     $index: str-index($string, $search);
+
     @if $index {
         @return str-slice($string, 1, $index - 1)+$replace+str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
     }
+
     @return $string;
 }
 

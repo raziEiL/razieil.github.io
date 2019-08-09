@@ -29,6 +29,7 @@
     .random__item-img {
         display: none;
     }
+
     .random__item {
         width: 100%;
     }
@@ -37,6 +38,7 @@
 .random__li {
     margin-bottom: var(--space-sm);
     color: var(--color-contrast-high);
+
     &:last-child {
         margin-bottom: 0;
     }

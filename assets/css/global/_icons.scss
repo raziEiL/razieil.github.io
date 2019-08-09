@@ -52,23 +52,28 @@
     // add this class to parent element that contains icon + text elements
     display: inline-flex;
     align-items: center;
+
     >*:nth-child(2) {
         margin-left: var(--space-xxs);
     }
+
     .icon {
         color: inherit;
         flex-shrink: 0;
     }
+
     &.icon-text--gap-none {
         >*:nth-child(2) {
             margin-left: 0;
         }
     }
+
     &.icon-text--gap-xxxs {
         >*:nth-child(2) {
             margin-left: var(--space-xxxs);
         }
     }
+
     &.icon-text--gap-xxxxs {
         >*:nth-child(2) {
             margin-left: var(--space-xxxxs);
@@ -90,6 +95,7 @@
     0% {
         transform: rotate(0deg);
     }
+
     100% {
         transform: rotate(360deg);
     }

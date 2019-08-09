@@ -47,6 +47,7 @@
 
 .intro__img {
     animation: pulsate-fwd 2s ease-in-out 2s infinite both;
+
     &:hover {
         cursor: pointer;
     }
@@ -56,9 +57,11 @@
     0% {
         opacity: 1;
     }
+
     50% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }

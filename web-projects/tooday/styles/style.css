@@ -307,9 +307,7 @@ q {
     text-align: center;
 }
 
-
 /* Common Classes */
-
 .h {
     color: var(--color-pr);
 }
@@ -363,14 +361,13 @@ q {
     transition: all .3s ease-out;
 }
 
-
 /* TODO: гамбургер для навигации */
-
 @media screen and (max-width: 600px) {
     .nav {
         justify-content: flex-end;
         padding: 6px 20px;
     }
+
     .nav__menu {
         display: flex;
         position: relative;
@@ -381,9 +378,11 @@ q {
         padding: 8px;
         cursor: pointer;
     }
+
     .nav__span {
         display: initial;
     }
+
     .nav__list {
         display: none;
         position: absolute;
@@ -397,13 +396,16 @@ q {
         width: 110px;
         padding: 10px;
     }
+
     .nav__item {
         margin: 0 0 15px 0;
         text-align: center;
     }
+
     .nav__list>.nav__item:last-child {
         margin-bottom: 0;
     }
+
     .nav__link {
         padding-bottom: 0;
         border-bottom: 2px solid rgba(0, 0, 0, 0);
@@ -419,14 +421,17 @@ q {
     .order__container {
         padding: 15px;
     }
+
     .order__grid-container {
         margin-bottom: 20px;
         grid-gap: 8px;
         grid-template-columns: 1fr;
     }
+
     .order__grid {
         padding: 4px;
     }
+
     .h {
         font-size: 1.5em;
     }
@@ -436,18 +441,23 @@ q {
     .portfolio__container {
         grid-template-columns: 1fr;
     }
+
     .portfolio__grid {
         padding: 12px;
     }
+
     .porfolio__img {
         max-height: 150px;
     }
+
     .portfolio__overlay {
         outline-offset: -11px;
     }
+
     .h3 {
         font-size: 1.2em;
     }
+
     .h3, .portfolio__p {
         margin-bottom: 0.5em;
     }

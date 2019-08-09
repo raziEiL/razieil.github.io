@@ -3,21 +3,27 @@
 var temp, arr, arr2, obj, num, str, a, b, i;
 
 // 'number, boolean, string, object, object, undefined'
-var test1 = 1, test2 = false, test3 = "hi", test4 = [0, 1], test5 = {a: 1, b: 2}, test6;
-console.log(typeof (test1) + ", " + typeof (test2) + ", " + typeof (test3) + ", " + typeof (test4) + ", " + typeof (test5) + ", " + typeof (test6));
+var test1 = 1,
+    test2 = false,
+    test3 = "hi",
+    test4 = [0, 1],
+    test5 = { a: 1, b: 2 },
+    test6;
+console.log(typeof(test1) + ", " + typeof(test2) + ", " + typeof(test3) + ", " + typeof(test4) + ", " + typeof(test5) + ", " + typeof(test6));
 
 // Напишите функцию min(a,b), которая возвращает меньшее из чисел a,b.
 console.log("======= Урок №1 =======");
-function min(a, b){
-  return (a > b) ? b : a;
+
+function min(a, b) {
+    return (a > b) ? b : a;
 }
 console.log(min(2, 5));
 console.log(min(3, -1));
 console.log(min(1, 1));
 console.log("//");
 // Напишите функцию pow(x,n), которая возвращает x в степени n.
-function pow(x, y){
-  return x ** y;
+function pow(x, y) {
+    return x ** y;
 }
 console.log(pow(3, 2));
 console.log(pow(3, 3));
@@ -59,37 +65,37 @@ arr = [2, 5, 3, 9];
 arr = arr[0] * arr[1] + arr[2] * arr[3];
 console.log("#4 " + arr);
 // '#5 1,3'
-obj = {a: 1, b: 2, c: 3};
+obj = { a: 1, b: 2, c: 3 };
 console.log("#5 " + obj.a + "," + obj["c"]);
 // '#6 200,1000'
-obj = {Kolya: "1000", Vasya: "500", Petya: "200"};
+obj = { Kolya: "1000", Vasya: "500", Petya: "200" };
 console.log("#6 " + obj.Petya + "," + obj.Kolya)
 // '#7 пт'
-obj = {1: 'пн', 2: 'вт', 3: 'ср', 4: 'чт', 5: 'пт', 6: 'сб', 7: 'вс'};
+obj = { 1: 'пн', 2: 'вт', 3: 'ср', 4: 'чт', 5: 'пт', 6: 'сб', 7: 'вс' };
 var day = 5;
 console.log("#7 " + obj[day]);
 // '#9 4'
-arr = [ [1, 2, 3], [4, 5, 6], [7,8,9] ];
+arr = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
 console.log("#9 " + arr[1][0]);
 // '#10 jQuery,jQuery'
-arr = {js:['jQuery', 'Angular'], php: 'hello', css: 'world'};
+arr = { js: ['jQuery', 'Angular'], php: 'hello', css: 'world' };
 console.log("#10 " + arr.js[0] + ',' + arr['js'][0]);
 // '#11 пн,wed'
-arr = {ru: ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'], en: ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun']};
+arr = { ru: ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'], en: ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'] };
 console.log("#11 " + arr.ru[0] + "," + arr['en'][2]);
 // '#12 вс'
 var lang = "ru";
 day = 7;
-console.log("#12 " + arr[lang][day-1]);
+console.log("#12 " + arr[lang][day - 1]);
 
 // Урок №4
 console.log("======= Урок №4 (if, else) =======");
 // '#8 true'
 temp = 1;
 if (temp === 1) // if (temp == 1 && typeof temp == "number")
-  console.log("#8 " + true);
+    console.log("#8 " + true);
 else
-  console.log("#8 " + false);
+    console.log("#8 " + false);
 
 // Урок №5
 console.log("======= Урок №5 (Циклы) =======");
@@ -100,7 +106,7 @@ console.log("======= Урок №5 (Циклы) =======");
 arr = [1, 2, 3, 4, 5];
 var result = 0;
 for (i = 0; i < arr.length; i++) {
-	result += arr[i];
+    result += arr[i];
 }
 console.log("#6 " + result);
 
@@ -109,19 +115,19 @@ console.log("#6 " + result);
 '#7 red = красный'
 '#7 blue = голубой' 
 */
-obj = {green: 'зеленый', red: 'красный', blue: 'голубой'};
+obj = { green: 'зеленый', red: 'красный', blue: 'голубой' };
 
 for (var key in obj) {
-	console.log("#7 " + key + " = " + obj[key]); //ключи
+    console.log("#7 " + key + " = " + obj[key]); //ключи
 }
 
 // '#16 кол-во итераций = 5. результат = 31.25'
 temp = 1000;
 var value = 0;
 
-while (temp > 50){
-  temp /= 2;
-  value++;
+while (temp > 50) {
+    temp /= 2;
+    value++;
 }
 console.log("#16 " + "кол-во итераций = " + value + ". результат = " + temp);
 
@@ -161,7 +167,7 @@ console.log("#8 " + "min = " + a + ", max = " + b);
 // Возвращает случайное целое число между min (включительно) и max (не включая max)
 // Использование метода Math.round() даст вам неравномерное распределение!
 function getRandomInt(min, max) {
-  return Math.floor(Math.random() * (max - min)) + min;
+    return Math.floor(Math.random() * (max - min)) + min;
 }
 
 console.log("#8 " + getRandomInt(1, 100));
@@ -187,10 +193,10 @@ console.log("#5 " + str.indexOf('учу'))
 num = 5;
 
 if (str.length > num)
-  result = str.substr(0, num) + '...';
+    result = str.substr(0, num) + '...';
 else
-  result = str;
-  
+    result = str;
+
 console.log("#6 " + result);
 
 // '#7 я-учу-javascript!'
@@ -219,9 +225,9 @@ console.log("#12 " + str.substr(0, 1).toUpperCase() + str.substr(1));
 // '#13/14 я,Учу,Javascript!'
 arr = str.split(' ');
 num = 1; //  с какого элемента массива заменять заглавную букву
-for (i in arr){
-  if (i >= num)
-   arr[i] = arr[i].substr(0, 1).toUpperCase() + arr[i].substr(1);
+for (i in arr) {
+    if (i >= num)
+        arr[i] = arr[i].substr(0, 1).toUpperCase() + arr[i].substr(1);
 }
 
 console.log("#13/14 " + arr);
@@ -277,7 +283,7 @@ arr.sort();
 console.log("#13 " + arr);
 
 // 14
-obj = {js:'test', jq: 'hello', css: 'world'};
+obj = { js: 'test', jq: 'hello', css: 'world' };
 
 //  Урок №9 http://code.mu/tasks/javascript/base/praktika-na-kombinacii-standartnyh-funkcij-javascript.html
 console.log("======= Урок №9 (Практика комбинации функций) =======");
@@ -304,7 +310,7 @@ result = str.split('').sort().join('');
 console.log("#3 " + result);
 
 // '#4 HTTP' содержит ли строка др. строку
-str  = 'http://playcode.io';
+str = 'http://playcode.io';
 str2 = 'http://';
 console.log("#4 " + (!str.indexOf(str2) ? 'HTTP' : 'FALSE'));
 
@@ -319,25 +325,26 @@ console.log("======= Урок №11 =======");
 // 2
 num = 31;
 temp = '';
-for (i = 1; i <= num; i++){
-  if (num % i == 0){
-    if (temp.length)
-      temp += ', ';
-    temp += i;
-  }
+for (i = 1; i <= num; i++) {
+    if (num % i == 0) {
+        if (temp.length)
+            temp += ', ';
+        temp += i;
+    }
 }
 console.log(num + ' делится на: ' + temp);
 
 // 3 два одинаковых числа подряд
 arr = [1, 2, 2, 4, 5];
-function isEqNumInRow(arr){
-  var prev;
-  for (i = 0; i < arr.length; i++){
-    if (arr[i] == prev)
-      return true;
-    prev = arr[i];
-  }
-  return false;
+
+function isEqNumInRow(arr) {
+    var prev;
+    for (i = 0; i < arr.length; i++) {
+        if (arr[i] == prev)
+            return true;
+        prev = arr[i];
+    }
+    return false;
 }
 console.log(isEqNumInRow(arr));
 
@@ -347,118 +354,38 @@ console.log("======= Урок №13 =======");
 console.log("#1");
 var size = 9;
 
-for (var  x = 0; x <= size; x++){
-  temp = '';
-  for (var y = 0; y <= size; y++){
-      if (temp.length)
-        temp += '|';
-        
-      if (!x)
-        result = y; // headers row
-      else if (!y)
-        result = x; // headers column 
-      else
-        result = x * y; // table body
+for (var x = 0; x <= size; x++) {
+    temp = '';
+    for (var y = 0; y <= size; y++) {
+        if (temp.length)
+            temp += '|';
 
-      temp += result > 9 ? result : (result + ' ');
-  }
-  console.log(temp);
-  document.write(temp + '<br>');
+        if (!x)
+            result = y; // headers row
+        else if (!y)
+            result = x; // headers column 
+        else
+            result = x * y; // table body
+
+        temp += result > 9 ? result : (result + ' ');
+    }
+    console.log(temp);
+    //document.write(temp + '<br>');
 }
 
 console.log("#6");
-for (i = 1; i <= 9; i++){
-  temp = '';
-  for (x = 0; x < i; x++){
-    temp += i;
-  }
-  console.log(temp);
+for (i = 1; i <= 9; i++) {
+    temp = '';
+    for (x = 0; x < i; x++) {
+        temp += i;
+    }
+    console.log(temp);
 }
 
-for (i = 1; i <= 9; i+=2){
-  temp = '';
-  for (x = 0; x < i; x++){
-    temp += i;
-  }
-  console.log(temp);
+for (i = 1; i <= 9; i += 2) {
+    temp = '';
+    for (x = 0; x < i; x++) {
+        temp += i;
+    }
+    console.log(temp);
 }
-
-//  ---------------------
-console.log("======= ES6: freeCodeCamp ======= ");
-
-obj  = {a: 1, b: 2, c: 3};
-const {c:myVar} = obj;
-console.log("1) ", myVar); // 3
-
-//Use Destructuring Assignment to Assign Variables from Nested Objects
-const LOCAL_FORECAST = {
-  today: { min: 72, max: 83 },
-  tomorrow: { min: 73.3, max: 84.6 }
-};
-
-function getMaxOfTmrw(forecast) {
-  "use strict";
-const { tomorrow: { max: maxOfTomorrow } }= forecast;
-  return maxOfTomorrow;
-}
-
-console.log("2) ", getMaxOfTmrw(LOCAL_FORECAST)); // should be 84.6
-
-// ES6: Use Destructuring Assignment to Assign Variables from Arrays
-[a, b] = [1, 2, 3, 4, 5, 6];
-console.log("3) ", a, b); // 1, 2
-
-[a, b,,, c] = [1, 2, 3, 4, 5, 6];
-console.log("4) ", a, b, c); // 1, 2, 5
-
-a = 8, b = 6;
-[b, a] = [a, b];
-console.log("5) ", a, b); // 6, 8
-
-[a, b, ...arr] = [1, 2, 3, 4, 5, 7];
-console.log("6) ", a, b); // 1, 2
-console.log("7) ", arr); // [3, 4, 5, 7]
-
-//ES6: Use Destructuring Assignment to Pass an Object as a Function's Parameters
-obj = {a:1, b:2, c:3, d:4};
-const profileUpdate = ({c, d}) => {
-  return c+d;
-};
-console.log("8) ", profileUpdate(obj)); // 7
-
-// ES6: Create Strings using Template Literals
-obj = {name: "Denis", age: "20"};
-const greeting = `Hello, my name is ${obj.name}! I am ${obj.age} years old.`;
-console.log(greeting); // 'Hello, my name is Denis! I am 20 years old.'
-
-//
-const getMousePosition = (x, y) => ({ x, y });
-console.log(getMousePosition(1, 5)); // {x: 1 ,y: 5}
-
-//
-const person = {
-  name: "Taylor",
-  sayHello() {
-    return `Hello! My name is ${this.name}.`;
-  }
-};
-console.log(person.sayHello()); // 'Hello! My name is Taylor.'
-
-// class
-class Book {
-  constructor(author) {
-    this._author = author;
-  }
-  // getter
-  get writer(){
-    return this._author;
-  }
-  // setter
-  set writer(updatedAuthor){
-    this._author = updatedAuthor;
-  }
-}
-const lol = new Book('anonymous');
-console.log(lol.writer);  // anonymous
-lol.writer = 'wut';
-console.log(lol.writer);  // wut

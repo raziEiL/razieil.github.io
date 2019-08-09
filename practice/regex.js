@@ -2,13 +2,13 @@ var regEx, str;
 
 // Case sensive
 str = "Hello, World!";
-regEx= /Hello/;
+regEx = /Hello/;
 // true
 console.log(regEx.test(str));
 
 // Ignore Case
 str = "freeCodeCamp";
-regEx= /FREECodeCAMP/i;
+regEx = /FREECodeCAMP/i;
 // true
 console.log(regEx.test(str));
 

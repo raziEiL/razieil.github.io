@@ -9,6 +9,7 @@
     padding: var(--space-md);
     max-width: 600px;
     margin: 0 auto;
+
     &:hover {
         @include BoxShadow(5);
     }

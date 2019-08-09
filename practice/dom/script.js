@@ -50,8 +50,8 @@ document.querySelector(".btn").addEventListener("click", function(e) {
 // чтение данных из формы
 var log1 = document.querySelector(".container-form__log");
 var data_array = [];
-document.querySelector(".container-form__form").addEventListener("submit", function (e) {
-    
+document.querySelector(".container-form__form").addEventListener("submit", function(e) {
+
     let data = new FormData(e.target);
     console.log(data.get("name"), data.get("number"));
     data_array.push(new person(data.get("name"), data.get("number")));
@@ -63,8 +63,7 @@ document.querySelector(".container-form__form").addEventListener("submit", funct
     e.preventDefault();
 });
 
-function person(name, age){
+function person(name, age) {
     this.name = name;
     this.age = age;
 }
-
