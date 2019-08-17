@@ -95,6 +95,7 @@ function copyMachine(arr, num) {
 // [true,false,true],[true,false,true]
 console.log("13) ", copyMachine([true, false, true], 2));
 
+
 // #14 Combine Arrays with the Spread Operator
 function spreadOut() {
     let fragment = ['to', 'code'];
