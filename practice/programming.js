@@ -30,18 +30,8 @@ function Bird(name) {
 Bird.prototype.numLegs = 2; // prototype property
 
 let canary = new Bird("Tweety");
-let ownProps = [];
-let prototypeProps = [];
-
-for (let prop in canary) {
-    if (canary.hasOwnProperty(prop))
-        ownProps.push(prop);
-    else
-        prototypeProps.push(prop);
-}
-
-// ["name"], ["numLegs"]
-console.log("#3 " + ownProps, prototypeProps);
+// own props: name | prototype props: numLegs
+logProps(canary, 3);
 
 
 // #4 Прототип свойств как объект
@@ -61,7 +51,7 @@ let wow = new Wow("dog");
 wow.eat();
 
 
-// Сокращение кода для одинаковых прототипов
+// #5 Наследование (Сокращение кода для одинаковых прототипов)
 function Cat(name) {
     this.name = name;
 }
@@ -109,18 +99,19 @@ Rat.prototype.constructor = Rat;
 let cat = new Cat("Tom");
 let rat = new Rat("Jery");
 
-console.log("#5 " + cat.name, cat.type, cat.printName()); //Tom, animal, My name is Tom
-console.log("#5 " + rat.name, rat.type, rat.printName()); //Jery, animal, My name is Jery
+console.log("#5 " + cat.name, cat.type, cat.printName()); // Tom, animal, My name is Tom
+console.log("#5 " + rat.name, rat.type, rat.printName()); // Jery, animal, My name is Jery
 
 
-// Добавление и изменение свойств/методов
-function Garden(){}
-function Rose(){}
+// #6 Добавление и изменение свойств/методов
+function Garden() {}
+
+function Rose() {}
 
 // добавление
 Rose.prototype = {
     color: "green",
-    printColor: function(){return `The rouse is ${this.color}`}
+    printColor: function() { return `The rouse is ${this.color}` }
 }
 Rose.prototype.owner = "Lord";
 
@@ -128,13 +119,77 @@ Garden.prototype = Object.create(Rose.prototype);
 Garden.prototype.constructor = Garden;
 
 let rose = new Garden();
-console.log(rose.color, rose.printColor()); // green, The rouse is green
+console.log("#6 " + rose.color, rose.printColor()); // green, The rouse is green
 
 // перезапись
 Rose.prototype.color = "black";
-Rose.prototype.printColor = function(){return `My heart is ${this.color}`};
-console.log(rose.color, rose.printColor()); // black, My heart is black
+Rose.prototype.printColor = function() { return `My heart is ${this.color}` };
+console.log("#6 " + rose.color, rose.printColor()); // black, My heart is black
 
 rose.color = "white";
-rose.printColor = function(){return `My mind is ${this.color}`};
-console.log(rose.color, rose.printColor()); // white, My mind is white
+rose.printColor = function() { return `My mind is ${this.color}` };
+console.log("#6 " + rose.color, rose.printColor()); // white, My mind is white
+
+
+// #7 Mixin (альтернатива наследования)
+let bird = {
+    name: "Donald",
+    numLegs: 2
+};
+
+let boat = {
+    name: "Warrior",
+    type: "race-boat"
+};
+
+function glideMixin(obj) {
+    obj.glide = function() { return "Glide!"; }
+}
+
+glideMixin(bird);
+glideMixin(boat);
+console.log("#7 " + boat.glide())
+
+
+// #8 Mixing #2
+function Body() { this.name = "corpse" };
+let body = new Body();
+
+let mixing = {
+    mixHi: function(obj) { obj.hi = function() { return "Hi"; }; },
+    mixBye: function(obj) { obj.constructor.prototype.bye = function() { return "Bye"; }; }
+};
+
+mixing.mixHi(body);
+mixing.mixBye(body);
+// own props: name,hi | prototype props: bye
+logProps(body, 8);
+
+
+// #9 Защита свойств
+function Car() {
+    let weight = 15;
+    this.getWeight = function() { return weight; }
+}
+
+let car = new Car();
+console.log("#9 " + car.weight, car.getWeight()); // undefined, 15
+
+
+// #10 Анонимная функция, которая выполняется сразу (IIFE)
+(function() { console.log("#10 " + "A cozy nest is ready"); })();
+
+
+// Common function
+function logProps(obj, num) {
+    let ownProps = [];
+    let prototypeProps = [];
+
+    for (let prop in obj) {
+        if (obj.hasOwnProperty(prop))
+            ownProps.push(prop);
+        else
+            prototypeProps.push(prop);
+    }
+    console.log(`#${num} ` + "own props: " + ownProps + " | prototype props: " + prototypeProps);
+}
