@@ -35,7 +35,6 @@ function largestOfFour(arr) {
         array.push(prevNum);
     }
 
-    // You can do this!
     return array;
 }
 // [25, 48, 21, -3]
@@ -99,7 +98,7 @@ function titleCase(str) {
 console.log(titleCase("iS'm a LITTLE tea pOt"));
 
 
-// Соеденить массивы
+// Соединить массивы
 function frankenSplice(arr1, arr2, n) {
     let arrCopy = arr2.slice();
     for (let i = 0; i < arr1.length; i++)
@@ -236,7 +235,7 @@ function translatePigLatin(str) {
 }
 // aliforniacay
 console.log(translatePigLatin("california"));
-//algorithmway
+// algorithmway
 console.log(translatePigLatin("algorithm"));
 
 
@@ -248,3 +247,143 @@ function myReplace(str, before, after) {
 }
 
 console.log(myReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped"));
+
+
+// Составить пару ДНК
+function pairElement(str) {
+    let arr = [];
+
+    for (let i of str)
+        arr.push([i, getPair(i)]);
+
+    function getPair(str) {
+        switch (str) {
+            case "A":
+                return "T";
+            case "T":
+                return "A";
+            case "C":
+                return "G";
+            case "G":
+                return "C";
+        }
+    }
+    return arr;
+}
+// [ [ 'G', 'C' ], [ 'C', 'G' ], [ 'G', 'C' ] ]
+console.log(pairElement("GCG"));
+
+
+// Вернуть пропущенную букву
+function fearNotLetter(str) {
+    let validLetter;
+    for (let i = 1; i < str.length; i++) {
+        validLetter = str.charCodeAt(i - 1) + 1;
+        if (str.charCodeAt(i) !== validLetter)
+            return String.fromCharCode(validLetter);
+    }
+    return undefined;
+}
+// d
+console.log(fearNotLetter("abce"));
+// undefined
+console.log(fearNotLetter("abcdefghijklmnopqrstuvwxyz"));
+
+
+// Выборка уникальных значений из массивов
+function uniteUnique() {
+    let arr = [];
+    for (let arg of arguments) {
+        for (let num of arg) {
+            if (arr.indexOf(num) < 0)
+                arr.push(num);
+        }
+    }
+    return arr;
+}
+// [ 1, 3, 2, 5, 4 ]
+console.log(uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]));
+// [ 1, 3, 2, [ 5 ], [ 4 ] ]
+console.log(uniteUnique([1, 3, 2], [1, [5]], [2, [4]]));
+
+
+// Замена символов html кодами
+function convertHTML(str) {
+    const symbols = {
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        "\"": "&quot;",
+        "'": "&apos;"
+    };
+    // [ 'D', 'o', 'l', 'c', 'e', ' ', '&', ' ', 'G', 'a', 'b', 'b', 'a', 'n', 'a' ]
+    return str.split("").map(x => symbols[x] || x).join("");
+}
+// Dolce &amp; Gabbana
+console.log(convertHTML("Dolce & Gabbana"));
+// Hamburgers &lt; Pizza &lt; Tacos
+console.log(convertHTML("Hamburgers < Pizza < Tacos"));
+
+
+// Сумма нечетных чисел Фибоначчи до заданного числа (включительно)
+function sumFibs(num) {
+    let sum = 0;
+    let prevNum = 0;
+    let curNum = 1;
+    // 1,1,2,3
+    while (curNum <= num) {
+        if (curNum % 2)
+            sum += curNum;
+        curNum += prevNum;
+        prevNum = curNum - prevNum;
+    }
+    return sum;
+}
+// 5
+console.log(sumFibs(4));
+
+
+// Сумма простых чисел до заданного числа (включительно)
+function sumPrimes(num) {
+    let sum = 0;
+    for (let i = 2; i <= num; i++) {
+        if (isPrime(i))
+            sum += i;
+    }
+    // простое число делится на себя и 1
+    function isPrime(n) {
+        if (n <= 1)
+            return false;
+
+        for (let i = 2; i < n; i++) {
+            if (n % i == 0)
+                return false;
+        }
+        return true;
+    }
+    return sum;
+}
+// 17
+console.log(sumPrimes(10));
+
+
+// Найти наименьшее общее кратное с учетом диапазона чисел
+function smallestCommons(arr) {
+    let range = arr.sort((a, b) => a - b);
+    const lastNum = range.pop();
+    // [ 1, 2, 3, 4 ]
+    for (let i = range[0] + 1; i < lastNum; i++) {
+        range.push(i);
+    }
+
+    let mult = lastNum;
+    while (!range.every(n => mult % n == 0)) {
+        mult += lastNum;
+    }
+
+    return mult;
+}
+// 6
+console.log(smallestCommons([3, 1]));
+// 12
+console.log(smallestCommons([2, 4]));
