@@ -1,5 +1,9 @@
 // === Алгоритмы ===
 
+function log(num, result) {
+    console.log(num + ")", result);
+}
+
 // #1 Найти самое длинное слово в строке
 function findLongestWordLength(str) {
     let arr = str.split(" ");
@@ -451,6 +455,201 @@ log(29, truthCheck([{ "user": "Tinky-Winky", "sex": "male" }, { "user": "Dipsy",
 // false
 log(29, truthCheck([{ "user": "Tinky-Winky", "sex": "male" }, { "user": "Po", "sex": 0 }], "sex"));
 
-function log(num, result) {
-    console.log(num + ")", result);
+
+// #30 Опциональный аргумент
+function addTogether() {
+    if (isValid(arguments[0])) {
+        if (arguments.length == 2) {
+            if (isValid(arguments[1]))
+                return arguments[0] + arguments[1];
+            return undefined;
+        }
+        return y => {
+            if (isValid(y))
+                return arguments[0] + y;
+        };
+    }
+
+    function isValid(x) {
+        return typeof x === "number";
+    }
 }
+// 5
+log(30, addTogether(2)(3));
+// undefined
+log(30, addTogether(2, "3"));
+// 5
+let f = addTogether(2);
+log(30, f(3));
+
+
+// #31 Создать конструктор "человек"
+var Person = function(firstAndLast) {
+    let firstName;
+    let lastName;
+    updateName(firstAndLast);
+
+    function updateName(firstAndLast) {
+        let name = firstAndLast.split(" ");
+        firstName = name[0];
+        lastName = name[1];
+    }
+
+    this.getFirstName = function() {
+        return firstName;
+    };
+    this.getLastName = function() {
+        return lastName;
+    };
+    this.getFullName = function() {
+        return firstName + " " + lastName;
+    };
+    this.setFirstName = function(x) {
+        firstName = x;
+    };
+    this.setLastName = function(x) {
+        lastName = x;
+    };
+    this.setFullName = function(x) {
+        updateName(x);
+    };
+};
+
+var bob = new Person('BobRoss');
+log(31, bob.getFullName()); // BobRoss undefined
+bob.setFullName("Haskell Curry");
+log(31, bob.getFullName()); // Haskell Curry
+log(31, bob.getLastName()); // Curry
+log(31, Object.keys(bob).length); // 6
+
+
+// #32 Преобразовать свойство объекта "высота" в "орбитальный период" https://en.wikipedia.org/wiki/Orbital_period
+function orbitalPeriod(arr) {
+    const GM = 398600.4418;
+    const earthRadius = 6367.4447;
+    return arr.map(o => {
+        o.orbitalPeriod = Math.round(Math.PI * 2 * Math.sqrt(Math.pow(earthRadius + o.avgAlt, 3) / GM));
+        delete o.avgAlt;
+        return o;
+    });
+}
+/* 
+[ { name: 'iss', orbitalPeriod: 5557 },
+  { name: 'hubble', orbitalPeriod: 5734 },
+  { name: 'moon', orbitalPeriod: 2377399 } ] 
+*/
+log(32, orbitalPeriod([{ name: "iss", avgAlt: 413.6 }, { name: "hubble", avgAlt: 556.7 }, { name: "moon", avgAlt: 378632.553 }]));
+
+/*
+|==========================================================================
+| JavaScript Algorithms and Data Structures Projects
+|==========================================================================
+*/
+
+// #33 Проверка слов читающихся в обоих направлениях (Палиндром)
+function palindrome(str) {
+    let palindrome = str.toLowerCase().replace(/\W|_/g, "");
+    for (let i = 0; i < palindrome.length; i++) {
+        if (palindrome[i] !== palindrome[palindrome.length - 1 - i])
+            return false;
+    }
+    // другое решение
+    // return palindrome === palindrome.split("").reverse().join("");
+    return true;
+}
+// true
+log(33, palindrome("eye"));
+// false
+log(33, palindrome("1 eye for of 1 eye."));
+
+
+// #34 Перевод числа в римские цифры (min: 1, max: 3999)
+function convertToRoman(num) {
+    const CONVERT = {
+        1000: "M",
+        500: "D",
+        100: "C",
+        50: "L",
+        10: "X",
+        5: "V",
+        1: "I"
+    };
+    const ROMAN = [1000, 500, 100, 50, 10, 5, 1];
+    const BREAK = [1000, 100, 10, 1];
+
+    let arr = [];
+    let divVal;
+    let piece;
+    let subVal;
+    let div;
+
+    for (let i of BREAK) {
+        if (num >= i) {
+            // разбиваем число на тысячи, сотни...
+            divVal = Math.floor(num / i);
+            piece = divVal * i;
+            num -= piece;
+
+            if (CONVERT[piece])
+                arr.push(CONVERT[piece]);
+            else if (divVal > 3) {
+                for (let x = 0; x < ROMAN.length; x++) {
+                    if (piece > ROMAN[x]) {
+                        // запись цифры справа
+                        subVal = piece - ROMAN[x];
+                        div = getDivider(subVal);
+                        if (div && (subVal / div) < 4 && ROMAN[x] != div) {
+                            arr.push(CONVERT[ROMAN[x]]);
+                            addNum(subVal / div, div);
+                            break;
+                        }
+                        // запись цифры слева
+                        subVal = ROMAN[x - 1] - piece;
+                        if (CONVERT[subVal])
+                            arr.push(CONVERT[subVal], CONVERT[ROMAN[x - 1]]);
+                        else
+                            console.log("bug! skip ", piece);
+                        break;
+                    }
+                }
+            }
+            else
+                addNum(divVal, i);
+
+            if (num <= 0)
+                break;
+        }
+    }
+
+    function getDivider(num) {
+        for (let i of BREAK) {
+            if (num % i == 0)
+                return i;
+        }
+    }
+
+    function addNum(count, index) {
+        while (count--)
+            arr.push(CONVERT[index]);
+    }
+    return arr.join("");
+
+    // лучшее решение
+    /* 
+    let decimalValue = [ 1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1 ];
+    let romanNumeral = [ 'M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I' ];
+
+    let romanized = '';
+
+    for (let index = 0; index < decimalValue.length; index++) {
+        while (decimalValue[index] <= num) {
+        romanized += romanNumeral[index];
+        num -= decimalValue[index];
+        }
+    }
+
+    return romanized; 
+    */
+}
+// MCMLXXXIV
+log(34, convertToRoman(1984));
