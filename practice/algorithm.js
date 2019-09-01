@@ -653,3 +653,34 @@ function convertToRoman(num) {
 }
 // MCMLXXXIV
 log(34, convertToRoman(1984));
+
+
+// #34 Шифр Цезаря https://en.wikipedia.org/wiki/Caesar_cipher
+function rot(str, code = false, shift = 13) {
+    let rot;
+    const MIN = 65; // A
+    const MAX = 90; // Z
+    return str.toUpperCase().split("").map(x => {
+        rot = x.charCodeAt(0);
+        if (rot > MAX || rot < MIN)
+            return x;
+        if (code) {
+            rot += shift;
+            if (rot > MAX) {
+                rot = rot - MAX + MIN - 1;
+            }
+        }
+        else {
+            rot -= shift;
+            if (rot < MIN) {
+                rot = MAX + 1 - (MIN - rot);
+            }
+        }
+        return String.fromCharCode(rot);
+    }).join("");
+}
+
+// SERR PBQR PNZC
+log(34, rot("FREE CODE CAMP", true));
+// FREE CODE CAMP
+log(34, rot("SERR PBQR PNZC"));
