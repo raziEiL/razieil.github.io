@@ -679,8 +679,70 @@ function rot(str, code = false, shift = 13) {
         return String.fromCharCode(rot);
     }).join("");
 }
-
 // SERR PBQR PNZC
 log(34, rot("FREE CODE CAMP", true));
 // FREE CODE CAMP
 log(34, rot("SERR PBQR PNZC"));
+
+
+// #35 Валидатор номера (US)
+function telephoneCheck(str) {
+    return /^(1[\s\-]?)?(\(\d{3}\)|\d{3})[\s\-]?\d{3}[\s\-]?\d{4}$/.test(str);
+}
+/* VALID NUMBERS
+555-555-5555
+(555)555-5555
+(555) 555-5555
+555 555 5555
+5555555555
+1 555 555 5555 */
+log(35, telephoneCheck("555-555-5555"));
+
+
+/* #36 Кассовый аппарат
+INSUFFICIENT_FUNDS - нет монет, чтобы сдать сдачу ровно
+OPEN - есть монеты для сдачи
+CLOSED - есть монеты для сдачи, но для след. операции монет нет */
+function checkCashRegister(price, cash, cid) {
+
+    let change = cash - price;
+    let arr = [];
+    const DENOM = [["PENNY", 0.01], ["NICKEL", 0.05], ["DIME", 0.1], ["QUARTER", 0.25], ["ONE", 1], ["FIVE", 5], ["TEN", 10], ["TWENTY", 20], ["ONE HUNDRED", 100]];
+    let needed;
+    let total;
+
+    for (let i = DENOM.length - 1; i >= 0 && change > 0; i--) {
+        if (change >= DENOM[i][1]) {
+            needed = Math.floor(change / DENOM[i][1]);
+            total = Math.floor(cid[i][1] / DENOM[i][1]);
+            if (needed >= total) {
+                arr.push(cid[i]);
+                change -= cid[i][1];
+            }
+            else {
+                needed *= DENOM[i][1];
+                change -= needed;
+                arr.push([DENOM[i][0], needed]);
+            }
+            // Fix! 0.6 - 0.5 = 0.009999999999999995 to 0.01
+            change = Math.round(change * 100) / 100;
+        }
+    }
+    if (change)
+        return { status: "INSUFFICIENT_FUNDS", change: [] };
+    if (cid.every(x => {
+            if (x[1] === 0)
+                return true;
+            else {
+                for (let i of arr) {
+                    if (i[0] === x[0])
+                        return x[1] - i[1] === 0;
+                }
+                return false;
+            }
+        }))
+        return { status: "CLOSED", change: [...cid] };
+    return { status: "OPEN", change: [...arr] };
+}
+//{ status: 'OPEN', change: [ [ 'NICKEL', 0.05 ], [ 'PENNY', 0.01 ] ] }
+log(36, checkCashRegister(0.94, 1, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]]));
