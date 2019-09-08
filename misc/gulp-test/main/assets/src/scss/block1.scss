@@ -10,24 +10,28 @@ $color-main: rgb(255, 208, 121);
 }
 
 body {
-    display: flex;
-    justify-content: center;
     background: linear-gradient(45deg, #EECFBA, #C5DDE8);
 }
 
-header {
-    color: var(--color-green);
-    font-size: calc(1.5 * var(--size-font));
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    width: 500px;
 }
 
-.text-block {
+.first-block {
     background-color: $color-main;
-    width: 50%;
-    padding: 10px;
+
+    &__header {
+        color: var(--color-green);
+        font-size: calc(1.5 * var(--size-font));
+    }
 
     &__info {
-        @include myColor(rgb(252, 85, 85));
         font-size: 24px;
         font-weight: 600;
+        @include myColor(red);
     }
 }

@@ -1,0 +1,15 @@
+.second-block {
+    background-color: rgb(97, 96, 96);
+
+    &__test {
+        color: violet;
+    }
+}
+
+.unused {
+    color: red;
+}
+
+.unused-hi {
+    color: black;
+}

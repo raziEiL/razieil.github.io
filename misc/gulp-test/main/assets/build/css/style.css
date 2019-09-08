@@ -1,0 +1,44 @@
+:root {
+    --color-green: rgb(68, 165, 68);
+    --size-font: 2em;
+}
+
+body {
+    background: linear-gradient(45deg, #EECFBA, #C5DDE8);
+}
+
+.container {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 500px;
+}
+
+.first-block {
+    background-color: #ffd079;
+}
+
+.first-block__header {
+    color: rgb(68, 165, 68);
+    color: var(--color-green);
+    font-size: 3em;
+    font-size: calc(1.5*var(--size-font));
+}
+
+.first-block__info {
+    font-size: 24px;
+    font-weight: 600;
+    color: red;
+}
+
+.second-block {
+    background-color: #616060;
+}
+
+.second-block__test {
+    color: violet;
+}
