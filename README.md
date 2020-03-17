@@ -18,5 +18,6 @@ root
 ```
 
 ## Смежные репозитории
-[freeCodeCamp](https://github.com/raziEiL/freeCodeCamp) - Responsive Web Design Projects
+[freeCodeCamp](https://github.com/raziEiL/freeCodeCamp) - Responsive Web Design Projects  
+[js-practice-edabit](https://github.com/raziEiL/js-practice-edabit) - Coding practice challenges from [edabit.com](https://edabit.com/)
 
